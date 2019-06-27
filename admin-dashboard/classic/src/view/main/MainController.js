@@ -151,7 +151,7 @@ Ext.define('Admin.view.main.MainController', {
 
     onMainViewRender:function() {
         if (!window.location.hash) {
-            this.redirectTo("login");//带验证
+            this.redirectTo("ggl");//带验证
         }
     },
 
