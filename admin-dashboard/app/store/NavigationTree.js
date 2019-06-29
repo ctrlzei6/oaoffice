@@ -15,16 +15,10 @@ Ext.define('Admin.store.NavigationTree', {
         children: [
             {
                 text: '公共信息',
-                iconCls: 'x-fa fa-ggxx',
-               // rowCls: 'nav-tree-badge nav-tree-badge-new',
-                //viewType: 'ggxx',
-                //routeId: 'ggxx', // routeId defaults to viewType
-                //leaf: true,
+                iconCls: 'x-fa fa-bell',
                 children: [
                     {
                         text: '公告栏',
-                        //iconCls: 'x-fa fa-ggl',
-                    // rowCls: 'nav-tree-badge nav-tree-badge-new',
                         viewType: 'ggl',
                         routeId: 'ggl', // routeId defaults to viewType
                         leaf: true,
@@ -40,7 +34,7 @@ Ext.define('Admin.store.NavigationTree', {
                 ]
             },{
                 text: '个人办公',
-                iconCls: 'x-fa fa-grbg',
+                iconCls: 'x-fa fa-address-card-o',
                 //rowCls: 'nav-tree-badge nav-tree-badge-new',
                 //viewType: 'grbg',
                 //leaf: true,
@@ -48,7 +42,6 @@ Ext.define('Admin.store.NavigationTree', {
                     {
                         text: '待办事宜',
                         iconCls: 'x-fa fa-dbsy',
-                    // rowCls: 'nav-tree-badge nav-tree-badge-new',
                         viewType: 'dbsy',
                         //routeId: 'dbsy', // routeId defaults to viewType
                         leaf: true,
@@ -64,7 +57,7 @@ Ext.define('Admin.store.NavigationTree', {
                 ]
             },{
                 text: '工作流管理',
-                iconCls: 'x-fa fa-gzlc',
+                iconCls: 'x-fa  fa-flask',
                 //rowCls: 'nav-tree-badge nav-tree-badge-new',
                // viewType: 'gzlc',
                 //leaf: true,
@@ -88,7 +81,7 @@ Ext.define('Admin.store.NavigationTree', {
                 ]
             },{
                 text: '行政办公',
-                iconCls: 'x-fa fa-rsgl',
+                iconCls: 'x-fa fa-outdent',
                 //rowCls: 'nav-tree-badge nav-tree-badge-new',
                 //viewType: 'xzbg',
                 //leaf: true,

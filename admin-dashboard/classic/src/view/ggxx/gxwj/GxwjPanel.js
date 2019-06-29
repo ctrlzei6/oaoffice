@@ -7,7 +7,7 @@ Ext.define('Admin.view.ggxx.gxwj.GxwjPanel',{
     ],
     viewModel: {type: 'gxwjViewModel'},
     xtype:'gxwjPanel',
-    controller:'gxwj',
+    controller:'gxwjController',
     laypout:'fit',
     items:[{
         xtype:'gridpanel',

@@ -17,47 +17,61 @@ Ext.define('Admin.view.user.ModifiedData',{
     },
     items:[
         {
-            xtype:'component',
-            html:'性别：',
-            //width:30
-        },
-        {
-            xtype: 'combobox',
-            //columnWidth: 0.56,
-            //reference:'searchFieldName',
-            hideLabel: true,
-            store:Ext.create("Ext.data.Store", {
-                //html:'<div class="main-logo">性别</div>',
-                fields: ["name", "value"],
+            xtype:'combo',
+            fieldLabel:'性别',
+            name: 'sex',
+            value:1,
+            store: Ext.create('Ext.data.Store', {
+                fields: ['name', 'val'],
                 data: [
-                    { name: '男', value: 'man' },
-                    { name: '女', value: 'woman' }
+                    {name: '男',val: 0},
+                    {name: '女',val: 1}
                 ]
-                
             }),
-            forceSelection : true,
-            displayField: 'name',
-            valueField:'value',
-            editable: false,
             queryMode: 'local',
+            displayField: 'name',
+            valueField: 'val',
             triggerAction: 'all',
-            value:'allbill',//显示所有值
-            allowBlank: false,
-            width: 350,
-            listeners:{
-                load:function(){
-                    Ext.getCmp('name').setValue(0);
-                    }
-      
-      
-                // afterRender: function(combo) {
-                //     　　var firstValue = store.reader.jsonData[0].value;
-                //     　　combo.setValue(firstValue);
-                // }
-            }
-        
-            //logTypeCombo.setValue( logTypeCombo.store.getAt(0).get('key') );
         },
+        // {
+
+        //     xtype:'combo',
+        //     fieldLabel:'性别',
+        //     //columnWidth: 0.56,
+        //     //reference:'searchFieldName',
+        //     hideLabel: true,
+        //     store:Ext.create("Ext.data.Store", {
+        //         //html:'<div class="main-logo">性别</div>',
+        //         fields: ["name", "value"],
+        //         data: [
+        //             { name: '男', value: 'man' },
+        //             { name: '女', value: 'woman' }
+        //         ]
+                
+        //     }),
+        //     forceSelection : true,
+        //     displayField: 'name',
+        //     valueField:'value',
+        //     editable: false,
+        //     queryMode: 'local',
+        //     triggerAction: 'all',
+        //     value:'allbill',//显示所有值
+        //     allowBlank: false,
+        //     width: 350,
+        //     listeners:{
+        //         load:function(){
+        //             Ext.getCmp('name').setValue(0);
+        //             }
+      
+      
+        //         // afterRender: function(combo) {
+        //         //     　　var firstValue = store.reader.jsonData[0].value;
+        //         //     　　combo.setValue(firstValue);
+        //         // }
+        //     }
+        
+        //     //logTypeCombo.setValue( logTypeCombo.store.getAt(0).get('key') );
+        // },
         {
             xtype: 'datefield',
             fieldLabel: '出生日期',

@@ -1,10 +1,19 @@
 Ext.define('Admin.view.ggxx.gxwj.GxwjController',{
     extend:'Ext.app.ViewController',
-    alias:'controller.gxwj',
+    alias:'controller.gxwjController',
     //xtype:'ggglPanel',
     addFile:function(grid, rowIndex, colIndex){
-        var win = grid.up('container').add(Ext.widget('addFile')).show();
+        var win = grid.up('gxwj').add(Ext.widget('addFile')).show();
     },
+    openEditWindow:function(grid, rowIndex, colIndex){
+        var record = grid.getStore().getAt(rowIndex);
+       //获取选中数据的字段值：console.log(record.get('id')); 或者 console.log(record.data.id);
+       if (record ) {
+           var win = grid.up('gxwj').add(Ext.widget('editFile'));
+           win.show();
+           win.down('form').getForm().loadRecord(record);
+       }
+   },
     // submitAddForm:function(btn){
     //     var form = btn.up('window').down('form');
     //     //form.getValues();

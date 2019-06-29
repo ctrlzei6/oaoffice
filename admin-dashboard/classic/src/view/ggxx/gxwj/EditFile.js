@@ -1,12 +1,12 @@
-Ext.define('Admin.view.ggxx.gxwj.AddFile', {
+Ext.define('Admin.view.ggxx.gxwj.EditFile', {
     extend: 'Ext.window.Window',
-    alias: 'widget.addFile',
+    alias: 'widget.editFile',
     height: 450,
     minHeight: 100,
     // minWidth: 300,
     width: 800,
     scrollable: true,
-    title: '新增文件',
+    title: '编辑文件',
     closable: true,
     constrain: true,
     defaultFocus: 'textfield',
@@ -16,15 +16,15 @@ Ext.define('Admin.view.ggxx.gxwj.AddFile', {
         xtype: 'form',
         layout: 'form',
         padding: '10px',
-        items: [
-        //     {
-        //     xtype: 'textfield',
-        //     fieldLabel: 'id',
-        //     name:'id',
-        //     hidden: true,
-        //     readOnly: true
-        // }, 
-        {
+        //ariaLabel: 'Enter your name',
+        readOnly: true,
+        items: [{
+            xtype: 'textfield',
+            fieldLabel: 'id',
+            name:'id',
+            hidden: true,
+            readOnly: true
+        }, {
             xtype: 'textfield',
             fieldLabel: '文件号',
             name:'fileId'
