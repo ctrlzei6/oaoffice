@@ -1,6 +1,6 @@
-Ext.define('Admin.view.ggxx.gxwj.AddFile', {
+Ext.define('Admin.view.grbg.dbsy.Dispose', {
     extend: 'Ext.window.Window',
-    alias: 'widget.addFile',
+    alias: 'widget.dispose',
     height: 450,
     minHeight: 100,
     // minWidth: 300,

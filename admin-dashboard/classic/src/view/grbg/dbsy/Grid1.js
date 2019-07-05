@@ -4,14 +4,14 @@ Ext.define('Admin.view.grbg.dbsy.Grid1',{
     requires:[
         //'Admin.view.ggl.List',
         'Admin.view.main.MainModel',
-        //'Admin.store.gg.Ggdata'
+        'Admin.store.dbsy.Dbsydata'
     ],
-    
-    //viewModel: {type: 'gglViewModel'},
+    controller:'dbsyController',
+    viewModel: {type: 'dbsyViewModel1'},
     laypout:'fit',
     items:[{
         xtype:'gridpanel',
-        //bind: '{gglLists}',
+        bind: '{dbsyLists}',
         tbar: [{
             xtype: 'combobox',
             reference:'searchFieldName',
@@ -65,19 +65,6 @@ Ext.define('Admin.view.grbg.dbsy.Grid1',{
             iconCls: 'fa fa-search',
             handler: 'quickSearch'
         }, 
-        // '->',{
-        //     text: '新增公告',
-        //     tooltip: 'Add a new gg',
-        //     iconCls: 'fa fa-plus',
-        //     handler: 'onAddClick'	
-        // },'-',{
-        //     text: '删除公告',
-        //     tooltip: 'Remove the selected item',
-        //     iconCls:'fa fa-trash',
-        //     itemId: 'orderGridPanelRemove',
-        //     disabled: true,
-        //     handler: 'deleteMoreRows'	
-        // }
         ],
         columns: [
             {
@@ -119,11 +106,26 @@ Ext.define('Admin.view.grbg.dbsy.Grid1',{
                 flex: 1
             },
             {
-                //xtype: 'datecolumn',
-                cls: 'content-column',
-                width: 180,
-                dataIndex: 'operate',
-                text: '流程操作'
+                xtype: 'actiontextcolumn',
+                //cls: 'content-column',
+                width: 200,
+                //dataIndex: 'operate',
+                text: '流程操作',
+                tooltip: 'edit ',
+                items:[
+                    {
+                        text:"处理 ",
+                        width:50,
+                        handler:"dispose"
+                    },
+                    {
+                        text:" 查看",
+                        width:50,
+                        //spaces:3,
+                    }
+                    //{xtype: 'button', tooltip: '处理',iconCls:'x-fa fa-check',handler: 'deleteOneRow'},
+                    //{xtype: 'button', tooltip: '查看',iconCls: 'x-fa fa-eye',handler: 'onDisableButton'}
+                ]
             }
         ]
         // listeners: {

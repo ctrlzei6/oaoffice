@@ -5,7 +5,7 @@ Ext.define('Admin.model.FileModel', {
         {type: 'int',name: 'id'},
         {type: 'int',name: 'identifier'},
         {type: 'string',name: 'fileid'},
-        {type: 'string',name: 'fullname'},
+        {type: 'string',name: 'filename'},
         {type: 'string',name: 'filetype'},
         //{type: 'date', name: 'date', dateFormat:'Y/m/d H:i:s'}
        // 'identifier','ggtheme', 'time','publishman','publishtime'

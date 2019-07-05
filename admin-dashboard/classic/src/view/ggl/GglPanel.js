@@ -78,10 +78,14 @@ Ext.define('Admin.view.ggl.GglPanel',{
                 // renderer: function(value) {
                 //     return "<img src='resources/images/user-profile/" + value + "' alt='Profile Pic' height='40px' width='40px'>";
                 // },
+                xtype: 'uxColumn',
                 width: 220,
                 dataIndex: 'ggtheme',
                 text: '公告主题',
-                
+                // listeners: {
+                //     //监听点击事件
+                //     linkclick: 'onEditClick'
+                // }
 
             },
             {

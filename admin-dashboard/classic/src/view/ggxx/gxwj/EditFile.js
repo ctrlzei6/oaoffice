@@ -27,16 +27,16 @@ Ext.define('Admin.view.ggxx.gxwj.EditFile', {
         }, {
             xtype: 'textfield',
             fieldLabel: '文件号',
-            name:'fileId'
+            name:'fileid'
         }, {
             xtype: 'textfield',
             fieldLabel: '文件标题',
-            name:'fileTitle'
+            name:'filename'
         }, 
         {
             xtype:'combo',
             fieldLabel:'文件类型：',
-            name: 'fileTitle',
+            name: 'filetype',
             value:0,
             store: Ext.create('Ext.data.Store', {
                 fields: ["name", "value"],

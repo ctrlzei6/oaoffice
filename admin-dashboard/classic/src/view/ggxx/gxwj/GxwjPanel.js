@@ -78,7 +78,7 @@ Ext.define('Admin.view.ggxx.gxwj.GxwjPanel',{
             {
                 xtype: 'gridcolumn',
                 cls: 'content-column',
-                dataIndex: 'fullname',
+                dataIndex: 'filename',
                 text: '文件标题',
                 flex: 1
             },
@@ -97,6 +97,7 @@ Ext.define('Admin.view.ggxx.gxwj.GxwjPanel',{
                 text: '相关操作',
                 tooltip: 'edit ',
                 items: [
+                   
                     {xtype: 'button',iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
                     {xtype: 'button',iconCls: 'x-fa fa-close'	,handler: 'deleteOneRow'},
                     //{xtype: 'button',iconCls: 'x-fa fa-ban'	 	,handler: 'onDisableButton'}
