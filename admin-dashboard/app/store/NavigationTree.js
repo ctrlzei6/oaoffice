@@ -103,37 +103,135 @@ Ext.define('Admin.store.NavigationTree', {
                         leaf: true,
                     }
                 ]
-            },{
-                text: '客户管理',
-                iconCls: 'x-fa fa-khgl',
-                //rowCls: 'nav-tree-badge nav-tree-badge-new',
-                viewType: 'khgl',
-                leaf: true
-            },{
-                text: '合同管理',
-                iconCls: 'x-fa fa-htgl',
-                //rowCls: 'nav-tree-badge nav-tree-badge-new',
-                viewType: 'htgl',
-                leaf: true
-            },{
-                text: '采购管理',
-                iconCls: 'x-fa fa-cggl',
-                //rowCls: 'nav-tree-badge nav-tree-badge-new',
-                viewType: 'cggl',
-                leaf: true
-            },{
-                text: '财务管理',
-                iconCls: 'x-fa fa-cwgl',
-                //rowCls: 'nav-tree-badge nav-tree-badge-new',
-                viewType: 'cwgl',
-                leaf: true
-            },{
-                text: '系统管理',
-                iconCls: 'x-fa fa-xtgl',
-                //rowCls: 'nav-tree-badge nav-tree-badge-new',
-                viewType: 'xtgl',
-                leaf: true
             },
+            {
+                text: '客户管理',
+                iconCls: 'x-fa  fa-address-card-o',
+                //viewType: 'khgl',
+                children: [
+                    {
+                        text: '客户档案',
+                        iconCls: 'x-fa fa-file-o',
+                        viewType: 'dagl',
+                        routeId: 'dashboard', 
+                        leaf: true
+                    },
+
+                    {
+                        text: '我的客户',
+                        iconCls: 'x-fa fa-exclamation-triangle',
+                        viewType: 'wdkh',
+                        leaf: true
+                    },
+                    {
+                        text: '客户分派',
+                        iconCls: 'x-fa fa-times-circle',
+                        viewType: 'khfp',
+                        leaf: true
+                    }
+                ]
+            },
+
+            {
+                text: '合同管理',
+                iconCls: 'x-fa  fa-bars',
+                //viewType: 'htgl',
+                //expanded: false,
+                //selectable: false,
+                //leaf: true
+                children: [
+                    {
+                        text: '合同管理',
+                        iconCls: 'x-fa fa-file-o',
+                        viewType: 'htgl',
+                        leaf: true
+                    },
+
+                    {
+                        text: '合同统计',
+                        iconCls: 'x-fa fa-exclamation-triangle',
+                        viewType: 'httj',
+                        leaf: true
+                    }
+                ]
+            },
+            
+            {
+                text: '采购管理',
+                iconCls: 'x-fa  fa-bars',
+                //viewType: 'cggl',
+                //expanded: false,
+                //selectable: false,
+                //leaf: true
+                children: [
+                    {
+                        text: '采购订单',
+                        iconCls: 'x-fa fa-file-o',
+                        viewType: 'cgdd',
+                        leaf: true
+                    },
+
+                    {
+                        text: '历史查询',
+                        iconCls: 'x-fa fa-exclamation-triangle',
+                        viewType: 'lscx',
+                        leaf: true
+                    }
+                ]
+            },
+
+            {
+                text: '财务管理',
+                iconCls: 'x-fa  fa-bars',
+                //viewType: 'cwgl',
+                //expanded: false,
+                //selectable: false,
+                //leaf: true
+                children: [
+                    {
+                        text: '支出账目',
+                        iconCls: 'x-fa fa-file-o',
+                        viewType: 'zczm',
+                        leaf: true
+                    },
+
+                    {
+                        text: '收入账目',
+                        iconCls: 'x-fa fa-exclamation-triangle',
+                        viewType: 'srzm',
+                        leaf: true
+                    }
+                ]
+            },
+
+            {
+                text: '系统管理',
+                iconCls: 'x-fa  fa-bars',
+                //viewType: 'xtgl',
+                //expanded: false,
+                //selectable: false,
+                //leaf: true
+                children: [
+                    {
+                        text: '员工管理',
+                        iconCls: 'x-fa fa-file-o',
+                        viewType: 'yggl',
+                        leaf: true
+                    },
+                    {
+                        text: '职务管理',
+                        iconCls: 'x-fa fa-file-o',
+                        viewType: 'zwgl',
+                        leaf: true
+                    },
+                    {
+                        text: '部门管理',
+                        iconCls: 'x-fa fa-exclamation-triangle',
+                        viewType: 'bmgl',
+                        leaf: true
+                    }
+                ]
+            }
         ]
     }
 });
