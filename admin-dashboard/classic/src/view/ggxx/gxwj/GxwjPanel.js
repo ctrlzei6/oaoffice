@@ -72,20 +72,20 @@ Ext.define('Admin.view.ggxx.gxwj.GxwjPanel',{
             {
                 xtype: 'gridcolumn',
                 width: 220,
-                dataIndex: 'fileid',
+                dataIndex: 'fileId',
                 text: '文件号'
             },
             {
                 xtype: 'gridcolumn',
                 cls: 'content-column',
-                dataIndex: 'filename',
+                dataIndex: 'fileName',
                 text: '文件标题',
                 flex: 1
             },
             {
                 xtype: 'gridcolumn',
                 cls: 'content-column',
-                dataIndex: 'filetype',
+                dataIndex: 'fileType',
                 text: '文件类型',
                 flex: 1
             },
@@ -97,42 +97,13 @@ Ext.define('Admin.view.ggxx.gxwj.GxwjPanel',{
                 text: '相关操作',
                 tooltip: 'edit ',
                 items: [
-                   
-                    {xtype: 'button',iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
-                    {xtype: 'button',iconCls: 'x-fa fa-close'	,handler: 'deleteOneRow'},
-                    //{xtype: 'button',iconCls: 'x-fa fa-ban'	 	,handler: 'onDisableButton'}
+                    {xtype: 'button',tooltip:"查看",iconCls: 'x-fa fa-search',handler: 'lookWindow'},
+                    {xtype: 'button',tooltip:"编辑",iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
+                    {xtype: 'button',tooltip:"删除",iconCls: 'x-fa fa-close'	,handler: 'deleteOneRow'},
+                    
                 ]
             },
-            // {
-            //     xtype: 'gridcolumn',
-            //     cls: 'content-column',
-            //     dataIndex: 'subscription',
-            //     text: 'Subscription',
-            //     flex: 1
-            // },
-            // {
-            //     xtype: 'actioncolumn',
-            //     items: [
-            //         {
-            //             xtype: 'button',
-            //             iconCls: 'x-fa fa-pencil'
-            //         },
-            //         {
-            //             xtype: 'button',
-            //             iconCls: 'x-fa fa-close'
-            //         },
-            //         {
-            //             xtype: 'button',
-            //             iconCls: 'x-fa fa-ban'
-            //         }
-            //     ],
-
-            //     cls: 'content-column',
-            //     width: 120,
-            //     dataIndex: 'bool',
-            //     text: 'Actions',
-            //     tooltip: 'edit '
-            // }
+            
         ],
 
     }]

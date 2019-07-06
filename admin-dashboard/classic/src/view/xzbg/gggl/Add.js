@@ -1,18 +1,18 @@
-Ext.define('Admin.view.xzbg.gggl.Edit', {
+Ext.define('Admin.view.xzbg.gggl.Add', {
     extend: 'Ext.window.Window',
-    alias: 'widget.edit',
-    
+    alias: 'widget.add',
     height: 550,
     minHeight: 100,
     // minWidth: 300,
-    width: 800,
+    width: 1020,
     //scrollable: true,
-    title: '编辑公告',
+    title: '发布新的公告',
     //closable: true,
     constrain: true,
-    
+    autoShow: true,
     defaultFocus: 'textfield',
     modal:true,
+
     layout: 'fit',
     items: [{
         xtype: 'form',
@@ -58,7 +58,8 @@ Ext.define('Admin.view.xzbg.gggl.Edit', {
             xtype: 'datefield',
             fieldLabel: '开始时间',
             name:'createTime',
-            format: 'Y/m/d H:i:s'
+            format: 'Y/m/d H:i:s',
+            columnWidth: 0.96
         }, {
             xtype: 'datefield',
             fieldLabel: '结束时间',

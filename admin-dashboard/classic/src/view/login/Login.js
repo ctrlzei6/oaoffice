@@ -39,7 +39,7 @@ Ext.define('Admin.view.login.Login',{
         
         items: [{
             xtype: 'textfield',
-            name: 'UserId',
+            name: 'username',
             fieldLabel: '用户名',
 
             allowBlank: false
@@ -48,7 +48,7 @@ Ext.define('Admin.view.login.Login',{
 
             xtype: 'textfield',
 
-            name: 'PassWord',
+            name: 'password',
 
             inputType: 'password',
 

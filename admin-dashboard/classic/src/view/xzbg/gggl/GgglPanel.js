@@ -43,11 +43,6 @@ Ext.define('Admin.view.xzbg.gggl.GgglPanel',{
             reference:'searchggTheme',
             name:'gglPanelSearchField'
         }, 
-        // '-',{
-        //     xtype:'textfield',
-        //     reference:'searchggContent',
-        //     name:'gglPanelSearchField'
-        // },
          '-',{
             text: '查询',
             iconCls: 'fa fa-search',
@@ -59,29 +54,38 @@ Ext.define('Admin.view.xzbg.gggl.GgglPanel',{
             handler: 'openAddWindow'
             
             
-        },'-',{
-            text: '删除公告',
-            //tooltip: 'Remove the selected item',
-            iconCls:'fa fa-trash',
-            //itemId: 'orderGridPanelRemove',
-            disabled: true,
-            handler:'onDeleteClick',
-            itemId: 'orderGridPanelRemove'
-            // bind: {
-            //     disabled: '{!ggglPanel.selection}'
-            // },
-        }],
-        selModel: {
-            selType: 'checkboxmodel',
-            checkOnly: true,
-            showHeaderCheckbox: true,
-            
         },
-        listeners: { //监听是否选中，灰色按钮变可用
-            selectionchange: function(selModel, selections){
-                this.down('#orderGridPanelRemove').setDisabled(selections.length === 0);
-            }
-        },
+        // '-',{
+        //     text: '删除公告',
+        //     //tooltip: 'Remove the selected item',
+        //     iconCls:'fa fa-trash',
+        //     //itemId: 'orderGridPanelRemove',
+        //     disabled: true,
+        //     handler:'onDeleteClick',
+        //     itemId: 'orderGridPanelRemove'
+        //     // bind: {
+        //     //     disabled: '{!ggglPanel.selection}'
+        //     // },
+        // },'-',{
+        //     text: '编辑公告',
+        //     //tooltip: 'Remove the selected item',
+        //     iconCls:'fa fa-trash',
+        //     //itemId: 'orderGridPanelRemove',
+        //     disabled: true,
+        //     handler:'editClick',
+        //     itemId: 'orderGridPanelEdit'
+        //     // bind: {
+        //     //     disabled: '{!ggglPanel.selection}'
+        //     // },
+        // }
+    ],
+        // 
+        // listeners: { //监听是否选中，灰色按钮变可用
+        //     selectionchange: function(selModel, selections){
+        //         this.down('#orderGridPanelRemove').setDisabled(selections.length === 0);
+        //         this.down('#orderGridPanelEdit').setDisabled(selections.length === 0);
+        //     }
+        // },
         columns: [
            
             {
@@ -96,11 +100,9 @@ Ext.define('Admin.view.xzbg.gggl.GgglPanel',{
             // },
             {
                 xtype: 'gridcolumn',
-                // renderer: function(value) {
-                //     return "<img src='resources/images/user-profile/" + value + "' alt='Profile Pic' height='40px' width='40px'>";
-                // },
+                
                 width: 220,
-                dataIndex: 'ggtheme',
+                dataIndex: 'ggTheme',
                 text: '公告主题',
                 listeners: {
                     linkclick: 'onEditClick'
@@ -109,14 +111,21 @@ Ext.define('Admin.view.xzbg.gggl.GgglPanel',{
             {
                 xtype: 'gridcolumn',
                 cls: 'content-column',
-                dataIndex: 'time',
-                text: '起止日期',
+                dataIndex: 'creatTime',
+                text: '开始日期',
                 flex: 1
             },
             {
                 xtype: 'gridcolumn',
                 cls: 'content-column',
-                dataIndex: 'publishman',
+                dataIndex: 'stopTime',
+                text: '结束日期',
+                flex: 1
+            },
+            {
+                xtype: 'gridcolumn',
+                cls: 'content-column',
+                dataIndex: 'publishMan',
                 text: '发布人',
                 flex: 1
             },
@@ -124,39 +133,24 @@ Ext.define('Admin.view.xzbg.gggl.GgglPanel',{
                 xtype: 'datecolumn',
                 cls: 'content-column',
                 width: 180,
-                dataIndex: 'publishtime',
+                dataIndex: 'publishTime',
                 text: '发布时间'
             },
-            // {
-            //     xtype: 'gridcolumn',
-            //     cls: 'content-column',
-            //     dataIndex: 'subscription',
-            //     text: 'Subscription',
-            //     flex: 1
-            // },
-            // {
-            //     xtype: 'actioncolumn',
-            //     items: [
-            //         {
-            //             xtype: 'button',
-            //             iconCls: 'x-fa fa-pencil'
-            //         },
-            //         {
-            //             xtype: 'button',
-            //             iconCls: 'x-fa fa-close'
-            //         },
-            //         {
-            //             xtype: 'button',
-            //             iconCls: 'x-fa fa-ban'
-            //         }
-            //     ],
-
-            //     cls: 'content-column',
-            //     width: 120,
-            //     dataIndex: 'bool',
-            //     text: 'Actions',
-            //     tooltip: 'edit '
-            // }
+            {
+                xtype: 'actioncolumn',
+                cls: 'content-column',
+                width: 180,
+                //dataIndex: 'action',
+                text: '相关操作',
+                tooltip: 'edit ',
+                items: [
+                    {xtype: 'button',tooltip:"查看",iconCls: 'x-fa fa-search',handler: 'lookWindow'},
+                    {xtype: 'button',tooltip:"编辑",iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
+                    {xtype: 'button',tooltip:"删除",iconCls: 'x-fa fa-close'	,handler: 'deleteOneRow'},
+                    
+                ]
+            },
+            
         ],
 
     }]

@@ -15,20 +15,39 @@ Ext.define('Admin.view.ggxx.gxwj.GxwjController',{
            win.down('form').getForm().loadRecord(record);
        }
    },
+   lookWindow:function(grid, rowIndex, colIndex){
+    var record = grid.getStore().getAt(rowIndex);
+   //获取选中数据的字段值：console.log(record.get('id')); 或者 console.log(record.data.id);
+   if (record ) {
+       var win = grid.up('gxwj').add(Ext.widget('lookFile'));
+       win.show();
+       win.down('form').getForm().loadRecord(record);
+   }
+},
    //删除文件	
 	deleteOneRow:function(grid, rowIndex, colIndex){
-		Ext.Msg.confirm('提示', '确定要进行删除操作吗？数据将无法还原！',
-			function(btn, text){
-				if(btn=='yes'){
+    Ext.Msg.show({
+        title: '提示',
+        message: '是否确认删除？',
+        buttons: Ext.Msg.YESNO,
+        icon: Ext.Msg.QUESTION,
+        fn: function (btn) {
+            if (btn === 'yes') {
+                var key = grid.selModel.getLastSelected().get('fileId');    
+                Ext.Ajax.request({
+                    url: URL + key,
+                    success: function (response, opts) {
+                        Ext.MessageBox.alert('提示', '删除成功');
+                        grid.store.reload();
+                    },
+                    failure: function (response, opts) {
+                        Ext.MessageBox.alert('提示', '删除异常');
+                    }
+                });
+            }
 
-					var store = grid.getStore();
-
-					var record = store.getAt(rowIndex);
-					
-					store.remove(record);//DELETE//http://localhost:8081/order/id
-					//store.sync();
-				}
-      }, this);
+        }
+    })
 
 	},
     // submitAddForm:function(btn){

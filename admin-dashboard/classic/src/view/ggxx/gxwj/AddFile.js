@@ -32,6 +32,10 @@ Ext.define('Admin.view.ggxx.gxwj.AddFile', {
             xtype: 'textfield',
             fieldLabel: '文件标题',
             name:'filename'
+        }, {
+            xtype: 'textfield',
+            fieldLabel: '文件说明',
+            name:'fileexplain'
         }, 
         {
             xtype:'combo',
@@ -62,7 +66,17 @@ Ext.define('Admin.view.ggxx.gxwj.AddFile', {
                 //     　　combo.setValue(firstValue);
                 // }
             }
-        },
+        },{
+            xtype: 'filefield',
+            fieldLabel: '附件上传',
+            labelWidth: 80,
+            msgTarget: 'side',
+            allowBlank: false,
+            margin: '10,10,10,10',
+            anchor: '100%',
+            buttonText:'选择文件'
+        }
+
     ]
     }],
 	buttons: ['->',{
