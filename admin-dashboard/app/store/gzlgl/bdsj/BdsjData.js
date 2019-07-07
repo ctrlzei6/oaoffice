@@ -1,19 +1,15 @@
-Ext.define('Admin.store.gg.Ggdata', {
+Ext.define('Admin.store.gzlgl.bdsj.BdsjData', {
     extend: 'Ext.data.Store',
 
-    alias: 'store.ggData',
+    alias: 'store.bdsjData',
 
-    model: 'Admin.model.Ggdata',
+    model: 'Admin.model.BdsjModel',
    
     data: { items: [
         { 
-            identifier: 1, 
-            ggTheme: "我爱中国", 
-            creatTime: "2019/06/21", 
-            stopTime: "2099/09/09", 
-            publishMan:'张三',
-            ggContent:'五十六个民族五十六枝花',
-            publishTime:'2019/06/21'
+            bdId:1,
+            bdName:'请假单',
+            bdClassify:'行政类'
         },
         //{ identifier: 2, ggtheme: "万里长城", sstime: "2019/6/21-2025/9/9", publishman:'李四',publishtime:'2019/6/25'},
         //{ identifier: 3, ggtheme: "辣鸡代码", sstime: "2019/6/21-2020/9/9", publishman:'张三',publishtime:'2019/6/24'}

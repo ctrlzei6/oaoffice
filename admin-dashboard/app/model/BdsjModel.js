@@ -1,12 +1,10 @@
-Ext.define('Admin.model.FileModel', {
+Ext.define('Admin.model.BdsjModel', {
     extend: 'Admin.model.Base',
 
     fields: [
-        //{type: 'int',name: 'id'},
-        {type: 'int',name: 'id'},
-        {type: 'string',name: 'fileId'},
-        {type: 'string',name: 'fileName'},
-        {type: 'string',name: 'fileType'},
+        {type: 'int',name: 'bdId'},
+        {type: 'string',name: 'bdName'},
+        {type: 'string',name: 'bdClassify'}
         //{type: 'date', name: 'date', dateFormat:'Y/m/d H:i:s'}
        // 'identifier','ggtheme', 'time','publishman','publishtime'
     ],
@@ -14,5 +12,4 @@ Ext.define('Admin.model.FileModel', {
         type: 'rest',
         url: '/order',
     }
-    
 });

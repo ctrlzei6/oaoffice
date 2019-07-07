@@ -5,7 +5,7 @@ Ext.define('Admin.view.xzbg.gggl.Edit', {
     height: 550,
     minHeight: 100,
     // minWidth: 300,
-    width: 800,
+    width: 1020,
     //scrollable: true,
     title: '编辑公告',
     //closable: true,

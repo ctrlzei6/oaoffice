@@ -70,7 +70,7 @@ Ext.define('Admin.view.grbg.dbsy.Grid1',{
             {
                 //xtype: 'gridcolumn',
                 width: 100,
-                dataIndex: 'liushuiid',
+                dataIndex: 'liushuiId',
                 text: '流水号'
             },
             {
@@ -79,7 +79,7 @@ Ext.define('Admin.view.grbg.dbsy.Grid1',{
                 //     return "<img src='resources/images/user-profile/" + value + "' alt='Profile Pic' height='40px' width='40px'>";
                 // },
                 width: 260,
-                dataIndex: 'worktitle',
+                dataIndex: 'workTitle',
                 text: '工作标题',
                 
 
@@ -87,21 +87,21 @@ Ext.define('Admin.view.grbg.dbsy.Grid1',{
             {
                 //xtype: 'gridcolumn',
                 cls: 'content-column',
-                dataIndex: 'faqiman',
+                dataIndex: 'faqiMan',
                 text: '发起人',
                 flex: 1
             },
             {
                 //xtype: 'gridcolumn',
                 cls: 'content-column',
-                dataIndex: 'formtype',
+                dataIndex: 'formType',
                 text: '表单类型',
                 flex: 1
             },
             {
                 //xtype: 'datecolumn',
                 cls: 'content-column',
-                dataIndex: 'presentstep',
+                dataIndex: 'presentStep',
                 text: '当前步骤',
                 flex: 1
             },
@@ -114,9 +114,9 @@ Ext.define('Admin.view.grbg.dbsy.Grid1',{
                 tooltip: 'edit ',
                 items:[
                     {
-                        text:"处理 ",
+                        text:"批准",
                         width:50,
-                        handler:"dispose"
+                        handler:"approve"
                     },
                     {
                         text:" 查看",

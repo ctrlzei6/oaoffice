@@ -62,7 +62,7 @@ Ext.define('Admin.view.ggxx.gxwj.GxwjPanel',{
             {
                 xtype: 'gridcolumn',
                 width: 40,
-                dataIndex: 'identifier',
+                dataIndex: 'id',
                 text: '#'
             },
             // {

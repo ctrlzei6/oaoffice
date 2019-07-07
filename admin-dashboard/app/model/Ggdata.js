@@ -4,11 +4,16 @@ Ext.define('Admin.model.Ggdata', {
     fields: [
         {type: 'int',name: 'identifier'},
         {type: 'string',name: 'ggTheme'},
-        {type: 'date',name: 'creatTime'},
-        {type: 'date',name: 'stopTime'},
+        {type: 'date',name: 'creatTime',format: 'Y/m/d H:i:s'},
+        {type: 'date',name: 'stopTime',format: 'Y/m/d H:i:s'},
+        {type: 'string',name: 'ggContent'},
         {type: 'string',name: 'publishMan'},
-        {type: 'date',name: 'publishTime'},
+        {type: 'date',name: 'publishTime',format: 'Y/m/d H:i:s'},
         //{type: 'date', name: 'date', dateFormat:'Y/m/d H:i:s'},
         //'identifier','ggtheme', 'time','publishman','publishtime'
-    ]
+    ],
+    proxy: {
+        type: 'rest',
+        url: '/order',
+    }
 });

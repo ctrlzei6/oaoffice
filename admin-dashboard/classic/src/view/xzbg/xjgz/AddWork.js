@@ -1,46 +1,44 @@
-Ext.define('Admin.view.ggxx.gxwj.AddFile', {
+Ext.define('Admin.view.xzbg.xjgz.AddWork', {
     extend: 'Ext.window.Window',
-    alias: 'widget.addFile',
-    height: 450,
+    alias: 'widget.addWork',
+    height: 550,
     minHeight: 100,
     // minWidth: 300,
-    width: 800,
-    scrollable: true,
-    title: '新增文件',
-    closable: true,
+    width: 1020,
+    //scrollable: true,
+    title: '新建工作',
+    //closable: true,
     constrain: true,
+    autoShow: true,
     defaultFocus: 'textfield',
     modal:true,
+
     layout: 'fit',
     items: [{
         xtype: 'form',
         layout: 'form',
         padding: '10px',
+        ariaLabel: 'Enter your name',
         items: [
-        //     {
-        //     xtype: 'textfield',
-        //     fieldLabel: 'id',
-        //     name:'id',
-        //     hidden: true,
-        //     readOnly: true
-        // }, 
         {
             xtype: 'textfield',
-            fieldLabel: '文件号',
-            name:'fileId'
+            fieldLabel: '#',
+            name:'identifier',
+            hidden: true,
+            readOnly: true
         }, {
             xtype: 'textfield',
-            fieldLabel: '文件标题',
-            name:'fileName'
-        }, {
+            fieldLabel: '工作标题',
+            name:'workTitle'
+        },{
             xtype: 'textfield',
-            fieldLabel: '文件说明',
-            name:'fileExplain'
+            fieldLabel: '发起人',
+            name:'faqiMan'
         }, 
         {
             xtype:'combo',
-            fieldLabel:'文件类型：',
-            name: 'fileType',
+            fieldLabel:'表单类型',
+            name: 'bdType',
             value:0,
             //hideLabel: true,
             store: Ext.create('Ext.data.Store', {
@@ -59,36 +57,24 @@ Ext.define('Admin.view.ggxx.gxwj.AddFile', {
                 load:function(){
                     Ext.getCmp('name').setValue(0);
                     }
-      
-      
-                // afterRender: function(combo) {
-                //     　　var firstValue = store.reader.jsonData[0].value;
-                //     　　combo.setValue(firstValue);
-                // }
             }
-        },{
-            xtype: 'filefield',
-            fieldLabel: '附件上传',
-            labelWidth: 80,
-            msgTarget: 'side',
-            allowBlank: false,
-            margin: '10,10,10,10',
-            anchor: '100%',
-            buttonText:'选择文件',
-            name:'fileUpload'
-        }
-
-    ]
+        }, {
+            xtype: 'textfield',
+            fieldLabel: '当前步骤',
+            name:'presentStep',
+            border:'none',
+            value:0
+        }]
     }],
 	buttons: ['->',{
         xtype: 'button',
-        text: '确定',
-        handler: 'submitAddForm'
+        text: '新建',
+        handler: 'submitAddWork'
     },{
         xtype: 'button',
         text: '取消',
         handler: function(btn) {
             btn.up('window').close();
         }
-    },'->']
+    }]
 });

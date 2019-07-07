@@ -25,28 +25,42 @@ Ext.define('Admin.view.xzbg.gggl.GglController',{
         }
     },
    //删除文件	
-	deleteOneRow:function(grid, rowIndex, colIndex){
-		Ext.Msg.confirm('提示', '确定要进行删除操作吗？数据将无法还原！',
-			function(btn, text){
-				if(btn=='yes'){
-
-					var store = grid.getStore();
-
-					var record = store.getAt(rowIndex);
-					
-					store.remove(record);//DELETE//http://localhost:8081/order/id
-					//store.sync();
-				}
-      }, this);
+   deleteOneRow:function(grid, rowIndex, colIndex){
+        Ext.Msg.show({
+            title: '提示',
+            message: '是否确认删除？',
+            buttons: Ext.Msg.YESNO,
+            icon: Ext.Msg.QUESTION,
+            fn: function (btn) {
+                if (btn === 'yes') {
+                    var key = grid.selModel.getLastSelected().get('id');    
+                    Ext.Ajax.request({
+                        url: URL + key,
+                        success: function (response, opts) {
+                            Ext.MessageBox.alert('提示', '删除成功');
+                            grid.store.reload();
+                        },
+                        failure: function (response, opts) {
+                            Ext.MessageBox.alert('提示', '删除异常');
+                        }
+                    });
+                }
+    
+            }
+        })
 
 	},
 
-    submitAddForm:function(btn){
-        var form = btn.up('window').down('form');
-        //form.getValues();
-        //更新事件
-    },
-  
-    //点击名字进行查看
+    /*Add Submit*/	
+	submitAddGg:function(btn){
+		var win    = btn.up('window');
+		var form = win.down('form');
+		var record = Ext.create('Admin.model.Ggdata');
+		var values  =form.getValues();//获取form数据
+		record.set(values);
+		record.save();
+		Ext.data.StoreManager.lookup('ggData').load();
+		win.close();
+	},
 
 });

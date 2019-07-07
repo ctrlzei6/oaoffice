@@ -8,9 +8,13 @@ Ext.define('Admin.model.User', {
         //{type: 'date', name: 'date', dateFormat:'Y/m/d H:i:s'},
         //'identifier','ggtheme', 'time','publishman','publishtime'
     ],
+    // proxy: {
+    //     //本地储存
+    //     type: 'localstorage',
+    //     id: 'demo-login-user'
+    // },
     proxy: {
-        //本地储存
-        type: 'localstorage',
-        id: 'demo-login-user'
+        type: 'rest',
+        url: '/order',
     }
 });

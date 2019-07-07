@@ -40,14 +40,14 @@ Ext.define('Admin.view.ggl.GglPanel',{
             }
         }, '-',{
             xtype:'textfield',
-            reference:'searchggTheme',
+            reference:'searchFieldValue',
             name:'gglPanelSearchField'
         }, 
         
          '-',{
             text: '查询',
             iconCls: 'fa fa-search',
-            handler: 'quickSearch'
+            handler: 'onSearch'
         }, 
         
         ],

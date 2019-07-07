@@ -70,12 +70,12 @@ Ext.define('Admin.view.xzbg.gggl.Add', {
 	buttons: ['->',{
         xtype: 'button',
         text: '发布',
-        handler: 'submitAddForm'
+        handler: 'submitAddGg'
     },{
         xtype: 'button',
         text: '取消',
         handler: function(btn) {
             btn.up('window').close();
         }
-    },'->']
+    }]
 });

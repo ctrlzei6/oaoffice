@@ -20,8 +20,7 @@ Ext.define('Admin.view.ggl.LookGgl', {
         readOnly: true,
         items: [
             {
-              
-               html:"fdsfd"
+               html:'GgDetail'
             }
         // {
         //     xtype: 'textfield',

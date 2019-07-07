@@ -27,16 +27,21 @@ Ext.define('Admin.view.ggxx.gxwj.EditFile', {
         }, {
             xtype: 'textfield',
             fieldLabel: '文件号',
-            name:'fileid'
+            name:'fileId'
         }, {
             xtype: 'textfield',
             fieldLabel: '文件标题',
-            name:'filename'
+            name:'fileName'
+        }, 
+        {
+            xtype: 'textfield',
+            fieldLabel: '文件说明',
+            name:'fileExplain'
         }, 
         {
             xtype:'combo',
             fieldLabel:'文件类型：',
-            name: 'filetype',
+            name: 'fileType',
             value:0,
             store: Ext.create('Ext.data.Store', {
                 fields: ["name", "value"],
@@ -50,6 +55,17 @@ Ext.define('Admin.view.ggxx.gxwj.EditFile', {
             valueField: 'val',
             triggerAction: 'all',
         },
+        {
+            xtype: 'filefield',
+            fieldLabel: '附件',
+            labelWidth: 80,
+            msgTarget: 'side',
+            allowBlank: false,
+            margin: '10,10,10,10',
+            anchor: '100%',
+            buttonText:'选择文件',
+            name:'fileUpload'
+        }
     ]
     }],
 	buttons: ['->',{
