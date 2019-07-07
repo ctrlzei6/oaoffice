@@ -18,26 +18,26 @@
         items: [{
             xtype: 'textfield',
             fieldLabel: 'id',
-            name:'CompactId',
+            name:'compactId',
             hidden: true,
             readOnly: true
         }, {
             xtype: 'textfield',
             fieldLabel: '合同名称',
-            name:'CompactName'
+            name:'compactName'
         },{
             xtype: 'textfield',
             fieldLabel: '合同内容',
-            name:'CompactTxt'
+            name:'compactTxt'
         },{
             xtype: 'datefield',
             fieldLabel: '签订日期',
-            name:'Compactqdrq',
+            name:'compactqdrq',
             format: 'Y/m/d'
         },{
             xtype: 'datefield',
             fieldLabel: '合同期限',
-            name:'Compactqixian',
+            name:'compactqixian',
             format: 'Y/m/d'
         }
         // ,{

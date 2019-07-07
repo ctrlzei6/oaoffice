@@ -18,10 +18,10 @@ Ext.define('Admin.view.cwgl.srzm.SrzmPanel', {
         bind: '{inAccountLists}',
         scrollable: false,
         columns: [
-            {xtype: 'gridcolumn',width: 70,dataIndex: 'InAccountId',text: 'ID'},
-            {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'InName',text: '收入项名'},
-            {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'InAmoubt',text: '收入数额'},
-            {xtype: 'gridcolumn',width: 150,cls: 'content-column',dataIndex: 'Inspecter',text: '账目检验员'},
+            {xtype: 'gridcolumn',width: 70,dataIndex: 'inAccountId',text: 'ID'},
+            {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'inName',text: '收入项名'},
+            {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'inAmoubt',text: '收入数额'},
+            {xtype: 'gridcolumn',width: 150,cls: 'content-column',dataIndex: 'inspecter',text: '账目检验员'},
 
             {xtype: 'actioncolumn',cls: 'content-column', width: 120,dataIndex: 'bool',text: '查看/编辑/删除',tooltip: 'edit ',
                 items: [
@@ -39,8 +39,8 @@ Ext.define('Admin.view.cwgl.srzm.SrzmPanel', {
             store:Ext.create("Ext.data.Store", {
                 fields: ["name", "value"],
                 data: [
-                    { name: '收入ID', value: 'InAccountId' },
-                    { name: '收入项名', value: 'InName' }
+                    { name: '收入ID', value: 'inAccountId' },
+                    { name: '收入项名', value: 'inName' }
                 ]
             }),
             displayField: 'name',

@@ -18,11 +18,11 @@ Ext.define('Admin.view.xtgl.bmgl.BmglPanel', {
             bind: '{departLists}',
             scrollable: false,
             columns: [
-                {xtype: 'gridcolumn',width: 70,dataIndex: 'DepartId',text: 'ID'},
-                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'DepartName',text: '部门名称'},
-                {xtype: 'gridcolumn',width: 150,cls: 'content-column',dataIndex: 'PrincipalUser',text: '部门负责人'},
-                {xtype: 'gridcolumn',width: 150,cls: 'content-column',dataIndex: 'ConnectTelNo',text: '联系电话'},
-                {xtype: 'gridcolumn',width: 150,cls: 'content-column',dataIndex: 'Faxes',text: '传真'},
+                {xtype: 'gridcolumn',width: 70,dataIndex: 'departId',text: 'ID'},
+                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'departName',text: '部门名称'},
+                {xtype: 'gridcolumn',width: 150,cls: 'content-column',dataIndex: 'principalUser',text: '部门负责人'},
+                {xtype: 'gridcolumn',width: 150,cls: 'content-column',dataIndex: 'connectTelNo',text: '联系电话'},
+                {xtype: 'gridcolumn',width: 150,cls: 'content-column',dataIndex: 'faxes',text: '传真'},
 
                 {xtype: 'actioncolumn',cls: 'content-column', width: 120,dataIndex: 'bool',text: '查看/编辑/删除',tooltip: 'edit ',
                     items: [
@@ -39,13 +39,13 @@ Ext.define('Admin.view.xtgl.bmgl.BmglPanel', {
                 store:Ext.create("Ext.data.Store", {
                     fields: ["name", "value"],
                     data: [
-                        { name: '部门ID', value: 'DepartId' },
-                        { name: '部门名称', value: 'DepartName' }
+                        { name: '部门ID', value: 'departId' },
+                        { name: '部门名称', value: 'departName' }
                     ]
                 }),
                 displayField: 'name',
                 valueField:'value',
-                value:'DepartId',
+                value:'departId',
                 editable: false,
                 queryMode: 'local',
                 triggerAction: 'all',

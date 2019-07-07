@@ -4,8 +4,8 @@ Ext.define('Admin.model.glmodel.xtgl.zwgl.ZwglModel', {
         'Ext.data.proxy.Rest'
     ],
 	fields: [
-        {type: 'int',name: 'RoleId'},
-	    {type: 'string',name: 'RoleName'},
-        {type: 'string', name: 'RoleDesc'},
+        {type: 'int',name: 'roleId'},
+	    {type: 'string',name: 'roleName'},
+        {type: 'string', name: 'roleDesc'},
 	]
 });

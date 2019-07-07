@@ -18,17 +18,17 @@
         items: [{
             xtype: 'textfield',
             fieldLabel: 'id',
-            name:'RoleId',
+            name:'roleId',
             hidden: true,
             readOnly: true
         }, {
             xtype: 'textfield',
             fieldLabel: '角色名称',
-            name:'RoleName'
+            name:'roleName'
         },{
             xtype: 'textfield',
             fieldLabel: '角色描述',
-            name:'RoleDesc'
+            name:'roleDesc'
         }
         // ,{
 		// 	xtype: 'datefield',

@@ -18,25 +18,25 @@ Ext.define('Admin.view.xtgl.bmgl.BmglEditWindow', {
         items: [{
             xtype: 'textfield',
             fieldLabel: 'id',
-            name:'DepartId',
+            name:'departId',
             hidden: true,
             readOnly: true
         }, {
             xtype: 'textfield',
             fieldLabel: '部门名称',
-            name:'DepartName'
+            name:'departName'
         },{
             xtype: 'textfield',
             fieldLabel: '部门负责人',
-            name:'PrincipalUser'
+            name:'principalUser'
         },{
             xtype: 'textfield',
             fieldLabel: '联系电话',
-            name:'ConnectTelNo'
+            name:'connectTelNo'
         },{
             xtype: 'textfield',
             fieldLabel: '传真',
-            name:'Faxes'
+            name:'faxes'
         }
         
         // {

@@ -7,10 +7,8 @@ Ext.define('Admin.store.glstore.htgl.htgl.HtglGridStore', {
 	data: {
 		'lists':
 		[
-			{'CompactId':'1','CompactName':"合同A", 'CompactTxt':"qqqqqqqqqqqqq", 'Compactqdrq':"2019/01/12", 'Compactqixian':"2019/02/28"},
-			{'CompactId':'2','CompactName':"合同B", 'CompactTxt':"xxxxxxxxxxx", 'Compactqdrq':"2019/02/22", 'Compactqixian':"2019/05/31"},
-			{'CompactId':'3','CompactName':"合同C", 'CompactTxt':"ccccccccccccc", 'Compactqdrq':"2019/03/12", 'Compactqixian':"2019/04/30"},
-			{'CompactId':'4','CompactName':"合同D", 'CompactTxt':"ddddddddddd", 'Compactqdrq':"2019/04/12", 'Compactqixian':"2019/06/30"}
+			{'compactId':'1','compactName':"合同A", 'compactTxt':"qqqqqqqqqqqqq", 'compactqdrq':"2019/01/12", 'compactqixian':"2019/02/28"},
+			{'compactId':'2','compactName':"合同B", 'compactTxt':"xxxxxxxxxxx", 'compactqdrq':"2019/02/22", 'compactqixian':"2019/05/31"}
 		]
 	},
 	//pageSize:2,
@@ -28,6 +26,6 @@ Ext.define('Admin.store.glstore.htgl.htgl.HtglGridStore', {
 
     sorters: {
         direction: 'ASC',
-        property: 'CilentId'
+        property: 'cilentId'
     }
 });

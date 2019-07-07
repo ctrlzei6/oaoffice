@@ -16,6 +16,17 @@ Ext.define('Admin.view.user.DataController', {
     //     this.createView();
     // },
     //创建视图
+    onCheckClick: function () {
+        //var index = userLists.store.find('userName',"Bart");
+        //var record = store.getAt(index);
+        //var win = add(Ext.widget('lookcheckData'));
+        //win.down('form').getForm().loadRecord(record);
+
+        Ext.widget('lookcheckData', {
+
+        });
+
+    },
     onAddClick: function () {
         Ext.widget('modifiedData', {
             title:'修改资料'

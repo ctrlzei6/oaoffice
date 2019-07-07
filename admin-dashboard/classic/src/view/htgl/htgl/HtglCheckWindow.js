@@ -18,29 +18,29 @@ Ext.define('Admin.view.khgl.htgl.HtglCheckWindow', {
         items: [{
             xtype: 'textfield',
             fieldLabel: 'id',
-            name:'CilentId',
+            name:'cilentId',
             hidden: true,
             readOnly: true
         }, {
             xtype: 'textfield',
             fieldLabel: '合同名称',
-            name:'CompactName',
+            name:'compactName',
             readOnly: true
         },{
             xtype: 'textfield',
             fieldLabel: '合同内容',
-            name:'CompactTxt',
+            name:'compactTxt',
             readOnly: true
         },{
             xtype: 'datefield',
             fieldLabel: '签订日期',
-            name:'Compactqdrq',
+            name:'compactqdrq',
             format: 'Y/m/d',
             readOnly: true
         },{
             xtype: 'datefield',
             fieldLabel: '合同期限',
-            name:'Compactqixian',
+            name:'compactqixian',
             format: 'Y/m/d',
             readOnly: true
         }

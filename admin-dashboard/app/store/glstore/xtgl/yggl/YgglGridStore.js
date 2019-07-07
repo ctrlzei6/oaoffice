@@ -6,10 +6,10 @@ Ext.define('Admin.store.glstore.xtgl.Yggl.YgglGridStore', {
 	data: {
 		'lists':
 		[
-			{'UserId':'001', 'UserName':"Lisa", 'PassWord':"123456",'DepartId':"1",'Gender':"女",'RoleId':"1"},
-            {'UserId':'002', 'UserName':"Bart", 'PassWord':"123456",'DepartId':"2",'Gender':"男",'RoleId':"2"},
-            {'UserId':'003', 'UserName':"Homer", 'PassWord':"123456",'DepartId':"3",'Gender':"男",'RoleId':"1"},
-            { 'UserId':'004', 'UserName':"Worm", 'PassWord':"123456",'DepartId':"2",'Gender':"女",'RoleId':"1"}
+			{'userId':'001', 'userName':"Lisa", 'passWord':"123456",'departId':"1",'gender':"女",'roleId':"1"},
+            {'userId':'002', 'userName':"Bart", 'passWord':"123456",'departId':"2",'gender':"男",'roleId':"2"},
+            {'userId':'003', 'userName':"Homer", 'passWord':"123456",'departId':"3",'gender':"男",'roleId':"1"},
+            {'userId':'004', 'userName':"Worm", 'passWord':"123456",'departId':"2",'gender':"女",'roleId':"1"}
 		]
 	},
 	//pageSize:2,
@@ -27,6 +27,6 @@ Ext.define('Admin.store.glstore.xtgl.Yggl.YgglGridStore', {
 
     sorters: {
         direction: 'ASC',
-        property: 'DepartId'
+        property: 'departId'
     }
 });

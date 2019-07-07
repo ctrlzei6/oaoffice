@@ -6,11 +6,11 @@ Ext.define('Admin.model.glmodel.htgl.htgl.HtglModel', {
     ],
 
 	fields: [
-		{type: 'int',name: 'CompactId'},
-		{type: 'string',name: 'CompactName'},
-	    {type: 'string',name: 'CompactTxt'},
-	    {type: 'date',name: 'Compactqdrq',dataFormat:'Y/m/d'},
-	    {type: 'date', name: 'Compactqixian',dataFormat:'Y/m/d'}
+		{type: 'int',name: 'compactId'},
+		{type: 'string',name: 'compactName'},
+	    {type: 'string',name: 'compactTxt'},
+	    {type: 'date',name: 'compactqdrq',dataFormat:'Y/m/d'},
+	    {type: 'date', name: 'compactqixian',dataFormat:'Y/m/d'}
 	]
 	
 	

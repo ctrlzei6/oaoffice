@@ -18,9 +18,9 @@ Ext.define('Admin.view.xtgl.zwgl.ZwglPanel', {
             bind: '{roleLists}',
             scrollable: false,
             columns: [
-                {xtype: 'gridcolumn',width: 70,dataIndex: 'RoleId',text: 'ID'},
-                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'RoleName',text: '角色名称'},
-                {xtype: 'gridcolumn',width: 150,cls: 'content-column',dataIndex: 'RoleDesc',text: '角色描述'},
+                {xtype: 'gridcolumn',width: 70,dataIndex: 'roleId',text: 'ID'},
+                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'roleName',text: '角色名称'},
+                {xtype: 'gridcolumn',width: 150,cls: 'content-column',dataIndex: 'roleDesc',text: '角色描述'},
 
                 {xtype: 'actioncolumn',cls: 'content-column', width: 120,dataIndex: 'bool',text: '查看/编辑/删除',tooltip: 'edit ',
                     items: [
@@ -37,13 +37,13 @@ Ext.define('Admin.view.xtgl.zwgl.ZwglPanel', {
                 store:Ext.create("Ext.data.Store", {
                     fields: ["name", "value"],
                     data: [
-                        { name: '角色ID', value: 'RoleId' },
-                        { name: '角色名称', value: 'RoleName' }
+                        { name: '角色ID', value: 'roleId' },
+                        { name: '角色名称', value: 'roleName' }
                     ]
                 }),
                 displayField: 'name',
                 valueField:'value',
-                value:'RoleId',
+                value:'roleId',
                 editable: false,
                 queryMode: 'local',
                 triggerAction: 'all',

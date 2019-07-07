@@ -4,14 +4,17 @@ Ext.define('Admin.view.main.GrxxButton', {
     //requires:['Admin.view.user.ModifiedController'],
     //controller: 'modifiedPassword',
     controller:'data',
-                                                
+                                          
     //viewModel: 'main',
     //layout: 'vbox',
     //width: 590,
-
+    viewModel: {type: 'ygglViewModel'},
     items: [ {
         defaults: {
             menu: [{
+                text:'查看资料',
+                handler: 'onCheckClick'
+            },{
               
                 text:'修改密码',
                 handler: 'onModifiedPassword'

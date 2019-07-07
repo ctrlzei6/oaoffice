@@ -6,11 +6,11 @@ Ext.define('Admin.model.glmodel.khgl.dagl.DaglModel', {
 
 
     fields: [
-	    {type: 'int',name: 'CilentId'},
-	    {type: 'string',name: 'CilentName'},
-	    {type: 'string',name: 'CilentGender'},
-        {type: 'string', name: 'Intro'},
-        {type: 'string', name: 'DepartName'}
+	    {type: 'int',name: 'cilentId'},
+	    {type: 'string',name: 'cilentName'},
+	    {type: 'string',name: 'cilentGender'},
+        {type: 'string', name: 'intro'},
+        {type: 'string', name: 'departName'}
         //fields data dataFormat:'Y/m/d H:i:s'
         //{type: 'data', name: 'data',dataFormat:'Y/m/d H:i:s'}
 	]
