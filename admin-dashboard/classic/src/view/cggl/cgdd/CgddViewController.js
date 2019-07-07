@@ -24,6 +24,16 @@ Ext.define('Admin.view.cggl.cgdd.CgddViewController', {
 			Ext.Msg.alert("警告","请选择一条数据进行操作！")
 		}
 	},
+	openCheckWindow2:function(grid, rowIndex, colIndex){
+		var record = grid.getStore().getAt(rowIndex);
+		if(record){
+			var win = grid.up('lscx').add(Ext.widget('cgddCheckWindow'));
+			win.show();
+			win.down('form').getForm().loadRecord(record);
+		}else{
+			Ext.Msg.alert("警告","请选择一条数据进行操作！")
+		}
+	},
 
 	//编辑
 	openEditWindow:function(grid, rowIndex, colIndex){

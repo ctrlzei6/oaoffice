@@ -12,7 +12,7 @@ Ext.define('Admin.store.glstore.htgl.htgl.HtglGridStore', {
 		]
 	},
 	//pageSize:2,
-
+ 
     proxy: {
         type: 'memory',
         //url: '~api/search/users'	//mvc url  xxx.json

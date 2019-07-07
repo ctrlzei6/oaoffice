@@ -4,7 +4,9 @@ Ext.define('Admin.model.User', {
     fields: [
         {type: 'string',name: 'username'},
         {type: 'string',name: 'password'},
-    
+        {type: 'int',name: 'departId'},
+        {type: 'string',name: 'gender'},
+		{type: 'int',name: 'roleId'}
         //{type: 'date', name: 'date', dateFormat:'Y/m/d H:i:s'},
         //'identifier','ggtheme', 'time','publishman','publishtime'
     ],
