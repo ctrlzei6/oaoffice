@@ -6,7 +6,7 @@ Ext.define('Admin.view.gzlgl.bdfl.BdflPanel',{
         'Admin.view.main.MainModel',
         //'Admin.store.gg.Ggdata'
     ],
-    //controller:'gggl',//映射到控制层
+    controller:'bdfl',//映射到控制层
     //reference: 'ggglPanel',
     viewModel: {type: 'bdflViewModel'},
     laypout:'fit',
@@ -52,9 +52,8 @@ Ext.define('Admin.view.gzlgl.bdfl.BdflPanel',{
             text: '新建',
             //tooltip: 'Add a new gg',
             iconCls: 'fa fa-plus',
-            handler: 'openAddWindow'
-            
-            
+            handler: 'addfl'
+          
         },
         ],
         

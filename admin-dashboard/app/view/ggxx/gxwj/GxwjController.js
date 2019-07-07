@@ -15,6 +15,7 @@ Ext.define('Admin.view.ggxx.gxwj.GxwjController',{
            win.down('form').getForm().loadRecord(record);
        }
    },
+   //查看文件
    lookWindow:function(grid, rowIndex, colIndex){
     var record = grid.getStore().getAt(rowIndex);
    //获取选中数据的字段值：console.log(record.get('id')); 或者 console.log(record.data.id);

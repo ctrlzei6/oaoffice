@@ -53,50 +53,60 @@ Ext.define('Admin.view.ggl.GglPanel',{
         ],
         columns: [
             {
-                //xtype: 'gridcolumn',
+                xtype: 'gridcolumn',
                 width: 40,
                 dataIndex: 'identifier',
                 text: '#'
             },
             {
-                xtype: 'uxColumn',
+                xtype: 'gridcolumn',
                 width: 220,
-                dataIndex: 'ggTheme',
-                text: '公告主题',
-                listeners: {
-                    //监听点击事件
-                    linkclick: 'look'
-                }
-
+                action:'look',
+                dataIndex:'ggTheme',
+                text: '公告主题' 
             },
             {
-                //xtype: 'gridcolumn',
+                xtype: 'datecolumn',
                 cls: 'content-column',
                 dataIndex: 'creatTime',
                 text: '开始日期',
                 flex: 1
             },
             {
-                //xtype: 'gridcolumn',
+                xtype: 'datecolumn',
                 cls: 'content-column',
                 dataIndex: 'stopTime',
                 text: '结束日期',
                 flex: 1
             },
             {
-                //xtype: 'gridcolumn',
+                xtype: 'gridcolumn',
                 cls: 'content-column',
                 dataIndex: 'publishMan',
                 text: '发布人',
                 flex: 1
             },
             {
-                //xtype: 'datecolumn',
+                xtype: 'datecolumn',
                 cls: 'content-column',
                 width: 180,
                 dataIndex: 'publishTime',
                 text: '发布时间'
             },
+            {
+                xtype: 'actioncolumn',
+                cls: 'content-column',
+                width: 180,
+                //dataIndex: 'action',
+                text: '相关操作',
+                tooltip: 'edit ',
+                items: [
+                    {xtype: 'button',tooltip:"查看",iconCls: 'x-fa fa-search',handler: 'lookWindow'},
+                    //{xtype: 'button',tooltip:"编辑",iconCls: 'x-fa fa-pencil' ,handler: 'openEditWindow'},
+                    //{xtype: 'button',tooltip:"删除",iconCls: 'x-fa fa-close'	,handler: 'deleteOneRow'},
+                    
+                ]
+            }
           
         ]
         // listeners: {

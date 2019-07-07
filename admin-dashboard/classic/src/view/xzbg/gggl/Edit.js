@@ -2,7 +2,7 @@ Ext.define('Admin.view.xzbg.gggl.Edit', {
     extend: 'Ext.window.Window',
     alias: 'widget.edit',
     
-    height: 550,
+    height: 600,
     minHeight: 100,
     // minWidth: 300,
     width: 1020,
@@ -49,20 +49,27 @@ Ext.define('Admin.view.xzbg.gggl.Edit', {
             xtype: 'textfield',
             fieldLabel: '发布人',
             name:'publishMan'
-        }, 
+        },
         {
             xtype: 'textfield',
             fieldLabel: '发布单位',
             name:'publishPart'
-        }, {
+        }, 
+        {
+            xtype: 'datefield',
+            fieldLabel: '发布时间',
+            name:'publishTime',
+            format: 'Y/m/d H:i:s'
+        },
+        {
             xtype: 'datefield',
             fieldLabel: '开始时间',
-            name:'createTime',
+            name:'creatTime',
             format: 'Y/m/d H:i:s'
         }, {
             xtype: 'datefield',
             fieldLabel: '结束时间',
-            name:'finishTime',
+            name:'stopTime',
             format: 'Y/m/d H:i:s'
         }]
     }],

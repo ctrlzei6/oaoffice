@@ -1,6 +1,6 @@
-Ext.define('Admin.view.ggl.LookGgl', {
+Ext.define('Admin.view.xzbg.gggl.Look', {
     extend: 'Ext.window.Window',
-    alias: 'widget.lookGgl',
+    alias: 'widget.look',
     
     height: 550,
     minHeight: 100,

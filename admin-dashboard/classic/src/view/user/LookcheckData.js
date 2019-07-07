@@ -1,5 +1,13 @@
 Ext.define('Admin.view.user.LookcheckData',{
     extend:'Ext.window.Window',
+    requires:[
+        //'Admin.view.ggl.List',
+        'Admin.view.main.MainModel',
+        'Admin.store.user.Userdata'
+    ],
+    alias: 'widget.lookcheckData',
+    //viewModel: {type: 'userViewModel'},
+    reference:"lookcheckData",
     xtype:'lookcheckData',
     title:'查看资料',
     autoShow: true,
@@ -10,28 +18,29 @@ Ext.define('Admin.view.user.LookcheckData',{
     defaultType:'textfield',
     items:[
         {
+            //bind: '{userLists}',
             xtype: 'form',
             layout: 'form',
             padding: '10px',
             ariaLabel: 'check',
             items: [{
                 xtype: 'textfield',
-                fieldLabel: 'id',
-                name:'userId',
-                value:'001',
-                hidden: true,
+                width: 220,
+                action:'look',
+                dataIndex:'ggTheme',
+                fieldLabel: '公告主题' ,
                 readOnly: true
             }, {
                 xtype: 'textfield', 
                 fieldLabel: '姓名',
-                name:'userName',
-                value:'Lisa',
+                dataIndex:'username',
+                //value:'Lisa',
                 readOnly: true
             },{
                 xtype:'combo',
                 fieldLabel:'部门',
-                name: 'departId',
-                value:0,
+                dataIndex: 'departId',
+                //value:0,
                 store: Ext.create('Ext.data.Store', {
                     fields: ['name', 'val'],
                     data: [
@@ -49,8 +58,8 @@ Ext.define('Admin.view.user.LookcheckData',{
             {
                 xtype:'combo',
                 fieldLabel:'职位',
-                name: 'roleId',
-                value:0,
+                dataIndex: 'roleId',
+                //value:0,
                 store: Ext.create('Ext.data.Store', {
                     fields: ['name', 'val'],
                     data: [
@@ -65,25 +74,17 @@ Ext.define('Admin.view.user.LookcheckData',{
                 columnWidth: 0.51,
                 readOnly: true
             },
-            // {
-            //     xtype: 'datefield',
-            //     fieldLabel: '出生日期',
-            //     name:'birthday',
-            //     format: 'Y/m/d',
-            //     columnWidth: 0.96,
-            //     readOnly: true
-            // },
             {
                 xtype: 'textfield',
                 fieldLabel: '性别',
-                name:'gender',
-                value:'女',
+                dataIndex:'gender',
+                //value:'女',
                 readOnly: true
             },{
                 xtype: 'textfield',
                 fieldLabel: '角色',
-                name:'roleId',
-                value:'1',
+                dataIndex:'roleId',
+                //value:'1',
                 readOnly: true
             }
         ]

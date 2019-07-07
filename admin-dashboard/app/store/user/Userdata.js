@@ -1,15 +1,18 @@
-Ext.define('Admin.store.gzlgl.bdsj.BdsjData', {
+Ext.define('Admin.store.user.Userdata', {
     extend: 'Ext.data.Store',
 
-    alias: 'store.bdsjData',
+    alias: 'store.userData',
 
-    model: 'Admin.model.BdsjModel',
+    model: 'Admin.model.User',
    
     data: { items: [
         { 
-            bdId:1,
-            bdName:'请假单',
-            bdflId:1
+            userId: 001, 
+            username: "admin", 
+            password: "12345", 
+            departId: 01, 
+            gender:'男',
+            roleId:101,
         },
         //{ identifier: 2, ggtheme: "万里长城", sstime: "2019/6/21-2025/9/9", publishman:'李四',publishtime:'2019/6/25'},
         //{ identifier: 3, ggtheme: "辣鸡代码", sstime: "2019/6/21-2020/9/9", publishman:'张三',publishtime:'2019/6/24'}

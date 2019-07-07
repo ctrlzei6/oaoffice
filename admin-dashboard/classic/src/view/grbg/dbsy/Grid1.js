@@ -94,7 +94,7 @@ Ext.define('Admin.view.grbg.dbsy.Grid1',{
             {
                 //xtype: 'gridcolumn',
                 cls: 'content-column',
-                dataIndex: 'formType',
+                dataIndex: 'bdflId',
                 text: '表单类型',
                 flex: 1
             },
@@ -121,7 +121,7 @@ Ext.define('Admin.view.grbg.dbsy.Grid1',{
                     {
                         text:" 查看",
                         width:50,
-                        //spaces:3,
+                        handler:'look'
                     }
                     //{xtype: 'button', tooltip: '处理',iconCls:'x-fa fa-check',handler: 'deleteOneRow'},
                     //{xtype: 'button', tooltip: '查看',iconCls: 'x-fa fa-eye',handler: 'onDisableButton'}

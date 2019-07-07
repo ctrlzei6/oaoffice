@@ -2,6 +2,7 @@ Ext.define('Admin.model.User', {
     extend: 'Admin.model.Base',
 
     fields: [
+        {type: 'int',name: 'userId'},
         {type: 'string',name: 'username'},
         {type: 'string',name: 'password'},
         {type: 'int',name: 'departId'},

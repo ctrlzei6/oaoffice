@@ -1,7 +1,7 @@
 Ext.define('Admin.view.xzbg.gggl.Add', {
     extend: 'Ext.window.Window',
     alias: 'widget.add',
-    height: 550,
+    height: 650,
     minHeight: 100,
     // minWidth: 300,
     width: 1020,
@@ -49,21 +49,27 @@ Ext.define('Admin.view.xzbg.gggl.Add', {
             xtype: 'textfield',
             fieldLabel: '发布人',
             name:'publishMan'
-        }, 
+        },
+        {
+            xtype: 'datefield',
+            fieldLabel: '发布时间',
+            name:'publishTime'
+        },
         {
             xtype: 'textfield',
             fieldLabel: '发布单位',
             name:'publishPart'
-        }, {
+        }, 
+        {
             xtype: 'datefield',
             fieldLabel: '开始时间',
-            name:'createTime',
+            name:'creatTime',
             format: 'Y/m/d H:i:s',
             columnWidth: 0.96
         }, {
             xtype: 'datefield',
             fieldLabel: '结束时间',
-            name:'finishTime',
+            name:'stopTime',
             format: 'Y/m/d H:i:s'
         }]
     }],

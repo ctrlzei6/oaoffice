@@ -109,14 +109,14 @@ Ext.define('Admin.view.xzbg.gggl.GgglPanel',{
                 }
             },
             {
-                xtype: 'gridcolumn',
+                xtype: 'datecolumn',
                 cls: 'content-column',
                 dataIndex: 'creatTime',
                 text: '开始日期',
                 flex: 1
             },
             {
-                xtype: 'gridcolumn',
+                xtype: 'datecolumn',
                 cls: 'content-column',
                 dataIndex: 'stopTime',
                 text: '结束日期',

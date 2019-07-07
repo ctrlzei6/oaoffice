@@ -4,7 +4,7 @@ Ext.define('Admin.model.BdsjModel', {
     fields: [
         {type: 'int',name: 'bdId'},
         {type: 'string',name: 'bdName'},
-        {type: 'string',name: 'bdClassify'}
+        {type: 'int',name: 'bdflId'}
         //{type: 'date', name: 'date', dateFormat:'Y/m/d H:i:s'}
        // 'identifier','ggtheme', 'time','publishman','publishtime'
     ],

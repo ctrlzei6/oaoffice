@@ -12,10 +12,11 @@ Ext.define('Admin.view.main.GrxxButton', {
     items: [ {
         defaults: {
             menu: [{
+                //xtype: 'button',
                 text:'查看资料',
                 handler: 'onCheckClick'
             },{
-              
+
                 text:'修改密码',
                 handler: 'onModifiedPassword'
             },{

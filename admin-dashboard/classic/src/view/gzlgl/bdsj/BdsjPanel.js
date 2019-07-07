@@ -6,7 +6,7 @@ Ext.define('Admin.view.gzlgl.bdsj.BdsjPanel',{
         'Admin.view.main.MainModel',
         'Admin.store.gzlgl.bdsj.BdsjData'
     ],
-    //controller:'gggl',//映射到控制层
+    controller:'bdsjController',//映射到控制层
     //reference: 'ggglPanel',
     viewModel: {type: 'bdsjViewModel'},
     laypout:'fit',
@@ -83,7 +83,7 @@ Ext.define('Admin.view.gzlgl.bdsj.BdsjPanel',{
                 xtype: 'gridcolumn',
                 cls: 'content-column',
                 flex: 1,
-                dataIndex: 'bdClassify',
+                dataIndex: 'bdflId',
                 text: '表单分类'
             },
             {

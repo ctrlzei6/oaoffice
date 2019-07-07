@@ -9,7 +9,7 @@ Ext.define('Admin.store.dbsy.Dbsydata', {
         { 
             liushuiId: 1,
             workTitle:"kkk001", 
-            faqiMan: "李四", 
+            faqiMan: "李四",
             bdflId: 1,
             presentStep:0
         }

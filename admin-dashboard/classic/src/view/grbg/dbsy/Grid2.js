@@ -4,14 +4,14 @@ Ext.define('Admin.view.grbg.dbsy.Grid2',{
     requires:[
         //'Admin.view.ggl.List',
         'Admin.view.main.MainModel',
-        //'Admin.store.gg.Ggdata'
+        'Admin.store.dbsy.Dbsydata'
     ],
-    
-    //viewModel: {type: 'gglViewModel'},
+    controller:'dbsyController',
+    viewModel: {type: 'dbsyViewModel1'},
     laypout:'fit',
     items:[{
         xtype:'gridpanel',
-        //bind: '{gglLists}',
+        bind: '{dbsyLists}',
         tbar: [{
             xtype: 'combobox',
             reference:'searchFieldName',
@@ -50,44 +50,24 @@ Ext.define('Admin.view.grbg.dbsy.Grid2',{
             reference:'searchggTheme',
             name:'gglPanelSearchField'
         }, 
-        // '-',{
-        //     xtype:'textfield',
-        //     reference:'searchggContent',
-        //     name:'gglPanelSearchField'
-        // },
          '-',{
             text: '查询',
             iconCls: 'fa fa-search',
             handler: 'quickSearch'
         }, 
-        // '->',{
-        //     text: '新增公告',
-        //     tooltip: 'Add a new gg',
-        //     iconCls: 'fa fa-plus',
-        //     handler: 'onAddClick'	
-        // },'-',{
-        //     text: '删除公告',
-        //     tooltip: 'Remove the selected item',
-        //     iconCls:'fa fa-trash',
-        //     itemId: 'orderGridPanelRemove',
-        //     disabled: true,
-        //     handler: 'deleteMoreRows'	
-        // }
+       
         ],
         columns: [
             {
                 //xtype: 'gridcolumn',
                 width: 100,
-                dataIndex: 'liushuiid',
+                dataIndex: 'liushuiId',
                 text: '流水号'
             },
             {
-                //xtype: 'gridcolumn',
-                // renderer: function(value) {
-                //     return "<img src='resources/images/user-profile/" + value + "' alt='Profile Pic' height='40px' width='40px'>";
-                // },
+               
                 width: 260,
-                dataIndex: 'worktitle',
+                dataIndex: 'workTitle',
                 text: '工作标题',
                 
 
@@ -95,29 +75,35 @@ Ext.define('Admin.view.grbg.dbsy.Grid2',{
             {
                 //xtype: 'gridcolumn',
                 cls: 'content-column',
-                dataIndex: 'faqiman',
+                dataIndex: 'faqiMan',
                 text: '发起人',
                 flex: 1
             },
             {
                 //xtype: 'gridcolumn',
                 cls: 'content-column',
-                dataIndex: 'formtype',
+                dataIndex: 'bdflId',
                 text: '表单类型',
                 flex: 1
             },
             {
                 //xtype: 'datecolumn',
                 cls: 'content-column',
-                dataIndex: 'presentstep',
+                dataIndex: 'presentStep',
                 text: '当前步骤',
                 flex: 1
             },
-            
+            {
+                xtype: 'actioncolumn',
+                //cls: 'content-column',
+                width: 200,
+                text: '流程操作',
+                tooltip: 'edit ',
+                items:[
+                    {xtype: 'button',tooltip:"查看",iconCls: 'x-fa fa-search',handler: 'look'},
+                ]
+            }
         ]
-        // listeners: {
-        //     select: 'onItemSelected'
-        // }
 
     }]
 });
