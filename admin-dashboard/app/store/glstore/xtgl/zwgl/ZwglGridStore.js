@@ -6,10 +6,10 @@ Ext.define('Admin.store.glstore.xtgl.zwgl.ZwglGridStore', {
 	data: {
 		'lists':
 		[
-			{'RoleId':'1', 'RoleName':"员工", 'RoleDesc':"员工描述"},
-            {'RoleId':'2', 'RoleName':"助理", 'RoleDesc':"助理描述"},
-            {'RoleId':'3', 'RoleName':"经理", 'RoleDesc':"经理描述"},
-            {'RoleId':'4', 'RoleName':"总经理", 'RoleDesc':"总经理描述"}
+			{'roleId':'1', 'roleName':"员工", 'roleDesc':"员工描述"},
+            {'roleId':'2', 'roleName':"助理", 'roleDesc':"助理描述"},
+            {'roleId':'3', 'roleName':"经理", 'roleDesc':"经理描述"},
+            {'roleId':'4', 'roleName':"总经理", 'roleDesc':"总经理描述"}
 		]
 	},
 	//pageSize:2,
@@ -27,6 +27,6 @@ Ext.define('Admin.store.glstore.xtgl.zwgl.ZwglGridStore', {
 
     sorters: {
         direction: 'ASC',
-        property: 'RoleId'
+        property: 'roleId'
     }
 });

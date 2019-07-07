@@ -19,11 +19,11 @@ Ext.define('Admin.view.cggl.cgdd.CgddPanel', {
         bind: '{orderLists}',
         scrollable: false,
         columns: [
-            {xtype: 'gridcolumn',width: 70,dataIndex: 'OrderId',text: '订单ID'},
-            {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'OrderName',text: '订单号'},
-            {xtype: 'gridcolumn',width: 150, cls: 'content-column',hidden:true,dataIndex: 'OrderTxt',text: '订单内容'},
-            {xtype: 'datecolumn',width: 150,cls: 'content-column',dataIndex: 'OrderDate',format: 'Y/m/d',text: '订单日期'},
-            {xtype: 'gridcolumn',cls: 'content-column',width: 300,dataIndex: 'AssePerson',text: '订单审批人'},
+            {xtype: 'gridcolumn',width: 70,dataIndex: 'orderId',text: '订单ID'},
+            {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'orderName',text: '订单号'},
+            {xtype: 'gridcolumn',width: 150, cls: 'content-column',hidden:true,dataIndex: 'orderTxt',text: '订单内容'},
+            {xtype: 'datecolumn',width: 150,cls: 'content-column',dataIndex: 'orderDate',format: 'Y/m/d',text: '订单日期'},
+            {xtype: 'gridcolumn',cls: 'content-column',width: 300,dataIndex: 'assePerson',text: '订单审批人'},
 
             {xtype: 'actioncolumn',cls: 'content-column', width: 120,dataIndex: 'bool',text: '查看/编辑/删除',tooltip: 'edit ',
                 items: [
@@ -40,13 +40,13 @@ Ext.define('Admin.view.cggl.cgdd.CgddPanel', {
             store:Ext.create("Ext.data.Store", {
                 fields: ["name", "value"],
                 data: [
-                    { name: '订单ID', value: 'OrderId' },
-                    { name: '订单号', value: 'OrderName' }
+                    { name: '订单ID', value: 'orderId' },
+                    { name: '订单号', value: 'orderName' }
                 ]
             }),
             displayField: 'name',
             valueField:'value',
-            value:'OrderId',
+            value:'orderId',
             editable: false,
             queryMode: 'local',
             triggerAction: 'all',

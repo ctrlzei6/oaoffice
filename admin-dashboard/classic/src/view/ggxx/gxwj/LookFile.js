@@ -25,20 +25,26 @@ Ext.define('Admin.view.ggxx.gxwj.LookFile', {
             hidden: true,
             readOnly: true
         }, {
-            xtype: 'tbtext',
-            cls:"gxwj-look",
-            //text:'文件号：',
-            html:'<div class="file-cls">这是一个显示文件详细信息的页面</div>',
+            xtype: 'textfield',
+            fieldLabel: '文件号',
+            name:'fileId',
+            readOnly:true
         }, {
-            xtype: 'tbtext',
-            
-            //fieldLabel: '文件标题',
-            name:'filename'
+            xtype: 'textfield',
+            fieldLabel: '文件标题',
+            name:'fileName',
+            readOnly:true
         }, 
         {
-            xtype:'tbtext',
-            //fieldLabel:'文件类型：',
-            name: 'filetype',
+            xtype: 'textfield',
+            fieldLabel: '文件说明',
+            name:'fileExplain',
+            readOnly:true
+        }, 
+        {
+            xtype:'combo',
+            fieldLabel:'文件类型：',
+            name: 'bdflId',
             value:0,
             store: Ext.create('Ext.data.Store', {
                 fields: ["name", "value"],
@@ -51,7 +57,19 @@ Ext.define('Admin.view.ggxx.gxwj.LookFile', {
             displayField: 'name',
             valueField: 'val',
             triggerAction: 'all',
+            readOnly:true
         },
+        {
+            xtype: 'textfield',
+            fieldLabel: '附件',
+            labelWidth: 80,
+            // msgTarget: 'side',
+            // allowBlank: false,
+            // margin: '10,10,10,10',
+            // //anchor: '100%',
+            // //buttonText:'选择文件',
+            name:'fileUpload'
+        }
     ]
     }]
 });

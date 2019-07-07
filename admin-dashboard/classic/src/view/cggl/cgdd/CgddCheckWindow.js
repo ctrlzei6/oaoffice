@@ -18,29 +18,29 @@ Ext.define('Admin.view.cggl.cgdd.CgddCheckWindow', {
         items: [{
             xtype: 'textfield',
             fieldLabel: '订单ID',
-            name:'OrderId',
+            name:'orderId',
             hidden: true,
             readOnly: true
         }, {
             xtype: 'textfield',
             fieldLabel: '订单号',
-            name:'OrderName',
+            name:'orderName',
             readOnly: true
         },{
             xtype: 'textfield',
             fieldLabel: '订单内容',
-            name:'OrderTxt',
+            name:'orderTxt',
             readOnly: true
         },{
             xtype: 'datefield',
             fieldLabel: '订单日期',
-            name:'OrderDate',
+            name:'orderDate',
             format: 'Y/m/d',
             readOnly: true
         },{
             xtype: 'textfield',
             fieldLabel: '订单审批人',
-            name:'AssePerson',
+            name:'assePerson',
             readOnly: true
         }
         

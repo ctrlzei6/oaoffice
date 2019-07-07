@@ -41,7 +41,7 @@ Ext.define('Admin.view.ggxx.gxwj.EditFile', {
         {
             xtype:'combo',
             fieldLabel:'文件类型：',
-            name: 'fileType',
+            name: 'bdflId',
             value:0,
             store: Ext.create('Ext.data.Store', {
                 fields: ["name", "value"],

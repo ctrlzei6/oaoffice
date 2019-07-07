@@ -18,25 +18,25 @@ Ext.define('Admin.view.khgl.khfp.KhfpEditWindow', {
         items: [{
             xtype: 'textfield',
             fieldLabel: 'id',
-            name:'CilentId',
+            name:'cilentId',
             hidden: true,
             readOnly: true
         }, {
             xtype: 'textfield',
             fieldLabel: '客户姓名',
-            name:'CilentName'
+            name:'cilentName'
         },{
             xtype: 'textfield',
             fieldLabel: '客户性别',
-            name:'CilentGender'
+            name:'cilentGender'
         },{
             xtype: 'textfield',
             fieldLabel: '客户描述',
-            name:'Intro'
+            name:'intro'
         },{
             xtype: 'textfield',
             fieldLabel: '分派职员',
-            name:'DepartName'
+            name:'departName'
         }
         
         // {

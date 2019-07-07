@@ -18,33 +18,33 @@ Ext.define('Admin.view.xtgl.yggl.YgglCheckWindow', {
         items: [{
             xtype: 'textfield',
             fieldLabel: 'id',
-            name:'UserId',
+            name:'userId',
             hidden: true,
             readOnly: true
         }, {
             xtype: 'textfield',
             fieldLabel: '员工名称',
-            name:'UserName',
+            name:'userName',
             readOnly: true
         },{
             xtype: 'textfield',
             fieldLabel: '密码',
-            name:'PassWord',
+            name:'passWord',
             readOnly: true
         },{
             xtype: 'textfield',
             fieldLabel: '部门',
-            name:'DepartId',
+            name:'departId',
             readOnly: true
         },{
             xtype: 'textfield',
             fieldLabel: '性别',
-            name:'Gender',
+            name:'gender',
             readOnly: true
         },{
             xtype: 'textfield',
             fieldLabel: '角色',
-            name:'RoleId',
+            name:'roleId',
             readOnly: true
         }
         

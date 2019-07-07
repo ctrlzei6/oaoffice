@@ -6,9 +6,9 @@ Ext.define('Admin.model.glmodel.cwgl.srzm.SrzmModel', {
     ],
 
 	fields: [
-		{type: 'int',name: 'InAccountId'},
-		{type: 'string',name: 'InName'},
-	    {type: 'string',name: 'InAmoubt'},
-	    {type: 'string', name: 'Inspecter'}
+		{type: 'int',name: 'inAccountId'},
+		{type: 'string',name: 'inName'},
+	    {type: 'string',name: 'inAmoubt'},
+	    {type: 'string', name: 'inspecter'}
 	]
 });

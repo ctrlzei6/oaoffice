@@ -7,9 +7,9 @@ Ext.define('Admin.store.glstore.cwgl.zczm.ZczmGridStore', {
 	data: {
 		'lists':
 		[
-			{'OutAccountId':'1','OutName':'支出A', 'OutAmoubt':"10000元", 'Outspecter':"AAA"},
-			{'OutAccountId':'2','OutName':'支出C', 'OutAmoubt':"20000元", 'Outspecter':"bbb"},
-			{'OutAccountId':'3','OutName':'支出B', 'OutAmoubt':"5000元", 'Outspecter':"ddd"}
+			{'outAccountId':'1','outName':'支出A', 'outAmoubt':"10000元", 'outspecter':"AAA"},
+			{'outAccountId':'2','outName':'支出C', 'outAmoubt':"20000元", 'outspecter':"bbb"},
+			{'outAccountId':'3','outName':'支出B', 'outAmoubt':"5000元", 'outspecter':"ddd"}
 		]
 	},
 	//pageSize:2,
@@ -27,6 +27,6 @@ Ext.define('Admin.store.glstore.cwgl.zczm.ZczmGridStore', {
 
     sorters: {
         direction: 'ASC',
-        property: 'OutAccountId'
+        property: 'outAccountId'
     }
 });

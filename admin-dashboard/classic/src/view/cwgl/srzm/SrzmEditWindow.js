@@ -18,21 +18,21 @@ Ext.define('Admin.view.cwgl.srzm.SrzmEditWindow', {
         items: [{
             xtype: 'textfield',
             fieldLabel: 'id',
-            name:'InAccountId',
+            name:'inAccountId',
             hidden: true,
             readOnly: true
         }, {
             xtype: 'textfield',
             fieldLabel: '收入项名',
-            name:'InName'
+            name:'inName'
         },{
             xtype: 'textfield',
             fieldLabel: '收入数额',
-            name:'InAmoubt'
+            name:'inAmoubt'
         },{
             xtype: 'textfield',
             fieldLabel: '账目检验员',
-            name:'Inspecter'
+            name:'inspecter'
         }
         
         // {

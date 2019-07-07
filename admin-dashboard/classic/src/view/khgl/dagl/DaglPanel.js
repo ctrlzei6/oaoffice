@@ -21,11 +21,11 @@ Ext.define('Admin.view.khgl.dagl.DaglPanel', {
             scrollable: false,
             
             columns: [
-                {xtype: 'gridcolumn',width: 70,dataIndex: 'CilentId',text: 'ID'},
-                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'CilentName',text: '客户姓名'},
-                {xtype: 'gridcolumn',width: 75,cls: 'content-column',dataIndex: 'CilentGender',text: '客户性别'},
-                {xtype: 'gridcolumn',cls: 'content-column',width: 300,hidden:true,dataIndex: 'Intro',text: '客户介绍'},
-                {xtype: 'gridcolumn',cls: 'content-column',width: 200,dataIndex: 'DepartName',text: '对接职工'},
+                {xtype: 'gridcolumn',width: 70,dataIndex: 'cilentId',text: 'ID'},
+                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'cilentName',text: '客户姓名'},
+                {xtype: 'gridcolumn',width: 75,cls: 'content-column',dataIndex: 'cilentGender',text: '客户性别'},
+                {xtype: 'gridcolumn',cls: 'content-column',width: 300,hidden:true,dataIndex: 'intro',text: '客户介绍'},
+                {xtype: 'gridcolumn',cls: 'content-column',width: 200,dataIndex: 'departName',text: '对接职工'},
                 {xtype: 'actioncolumn',cls: 'content-column', width: 120,dataIndex: 'bool',text: '查看',tooltip: 'edit ',
                     layout: 'vbox',
                     items: [
@@ -40,13 +40,13 @@ Ext.define('Admin.view.khgl.dagl.DaglPanel', {
 	            store:Ext.create("Ext.data.Store", {
 				    fields: ["name", "value"],
 				    data: [
-				      	{ name: '客户ID', value: 'CilentId' },
-						{ name: '客户姓名', value: 'CilentName' }
+				      	{ name: '客户ID', value: 'cilentId' },
+						{ name: '客户姓名', value: 'cilentName' }
 				    ]
 				}),
 	            displayField: 'name',
 	            valueField:'value',
-	            value:'CilentId',
+	            value:'cilentId',
 	            editable: false,
 	            queryMode: 'local',
 	            triggerAction: 'all',

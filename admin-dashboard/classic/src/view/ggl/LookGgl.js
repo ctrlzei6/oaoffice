@@ -1,9 +1,13 @@
 Ext.define('Admin.view.ggl.LookGgl', {
     extend: 'Ext.window.Window',
+    requires:[
+        //'Admin.view.ggl.List',
+        'Admin.view.main.MainModel',
+        'Admin.store.gg.Ggdata'
+    ],
     alias: 'widget.lookGgl',
     height: 650,
-    //minHeight: 100,
-    // minWidth: 300,
+    //viewModel: {type: 'gglViewModel'},
     width: 800,
     scrollable: true,
     title: '公告详情', 
@@ -15,12 +19,14 @@ Ext.define('Admin.view.ggl.LookGgl', {
     items: [{
         xtype: 'form',
         layout: 'form',
+        //bind: '{gglLists}',
         padding: '10px',
         //ariaLabel: 'Enter your name',
         readOnly: true,
         items: [
-            {
-               html:'GgDetail'
+            {  
+                //xtype: 'profilenotifications',
+                 
             }
         // {
         //     xtype: 'textfield',

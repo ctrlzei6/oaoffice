@@ -7,9 +7,9 @@ Ext.define('Admin.store.glstore.cggl.cgdd.CgddGridStore', {
 	data: {
 		'lists':
 		[
-			{'OrderId':'1','OrderName':'订单A', 'OrderTxt':"xxxxxxxxxxxxx", 'OrderDate':"2019/01/02", 'AssePerson':"AAA"},
-			{'OrderId':'2','OrderName':'订单B', 'OrderTxt':"rrrrrrrrrrrrrrr", 'OrderDate':"2019/02/02", 'AssePerson':"bbb"},
-			{'OrderId':'3','OrderName':'订单C','OrderTxt':"ccccccccccc", 'OrderDate':"2019/03/02", 'AssePerson':"ccc"}
+			{'orderId':'1','orderName':'订单A', 'orderTxt':"xxxxxxxxxxxxx", 'orderDate':"2019/01/02", 'assePerson':"AAA"},
+			{'orderId':'2','orderName':'订单B', 'orderTxt':"rrrrrrrrrrrrrrr", 'orderDate':"2019/02/02", 'assePerson':"bbb"},
+			{'orderId':'3','orderName':'订单C','orderTxt':"ccccccccccc", 'orderDate':"2019/03/02", 'assePerson':"ccc"}
 		]
 	},
 	//pageSize:2,
@@ -27,6 +27,6 @@ Ext.define('Admin.store.glstore.cggl.cgdd.CgddGridStore', {
 
     sorters: {
         direction: 'ASC',
-        property: 'OrderId'
+        property: 'orderId'
     }
 });

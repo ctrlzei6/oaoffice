@@ -13,7 +13,7 @@ Ext.define('Admin.store.file.Filedata', {
             fileId:"kkk001", 
             fileName: "我爱中国",
             fileExplain:'爱国教育文件', 
-            fileType: "行政类",
+            bdflId: 1,
             fileUpload:'soure/wenjian/aa.txt',
         }
         //{ identifier: '2', ggtheme: "万里长城", time: "2019/6/21-2025/9/9", publishman:'李四',publishtime:'2019/6/25'},

@@ -18,21 +18,21 @@ Ext.define('Admin.view.cwgl.zczm.ZczmEditWindow', {
         items: [{
             xtype: 'textfield',
             fieldLabel: 'id',
-            name:'OutAccountId',
+            name:'outAccountId',
             hidden: true,
             readOnly: true
         }, {
             xtype: 'textfield',
             fieldLabel: '支出项名',
-            name:'OutName'
+            name:'outName'
         },{
             xtype: 'textfield',
             fieldLabel: '支出数额',
-            name:'OutAmoubt'
+            name:'outAmoubt'
         },{
             xtype: 'textfield',
             fieldLabel: '账目检验员',
-            name:'Outspecter'
+            name:'outspecter'
         }
         
         // {

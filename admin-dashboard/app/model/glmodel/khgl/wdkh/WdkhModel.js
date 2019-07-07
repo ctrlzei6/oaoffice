@@ -6,10 +6,10 @@ Ext.define('Admin.model.glmodel.khgl.wdkh.WdkhModel', {
 
 
     fields: [
-	    {type: 'int',name: 'CilentId'},
-	    {type: 'string',name: 'CilentName'},
-	    {type: 'string',name: 'CilentGender'},
-        {type: 'string', name: 'Intro'}
+	    {type: 'int',name: 'cilentId'},
+	    {type: 'string',name: 'cilentName'},
+	    {type: 'string',name: 'cilentGender'},
+        {type: 'string', name: 'intro'}
         //fields data dataFormat:'Y/m/d H:i:s'
         //{type: 'data', name: 'data',dataFormat:'Y/m/d H:i:s'}
 	]

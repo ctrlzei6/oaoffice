@@ -23,7 +23,7 @@ Ext.define('Admin.view.xtgl.yggl.YgglViewController', {
 		}else{
 			Ext.Msg.alert("警告","请选择一条数据进行操作！")
 		}
-	},
+	}, 
 
 	//编辑
 	openEditWindow:function(grid, rowIndex, colIndex){

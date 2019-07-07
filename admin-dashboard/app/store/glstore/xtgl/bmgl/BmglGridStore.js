@@ -6,11 +6,11 @@ Ext.define('Admin.store.glstore.xtgl.bmgl.BmglGridStore', {
 	data: {
 		'lists':
 		[
-			{'DepartId':'1', 'DepartName':"部门A", 'PrincipalUser':"AAA", 'ConnectTelNo':"8700001", 'Faxes':"8710001"},
-			{'DepartId':'2', 'DepartName':"部门B", 'PrincipalUser':"BBB", 'ConnectTelNo':"8700002", 'Faxes':"8720002"},
-			{'DepartId':'3', 'DepartName':"部门C", 'PrincipalUser':"CCC", 'ConnectTelNo':"8700003", 'Faxes':"8730003"},
-			{'DepartId':'4', 'DepartName':"部门D", 'PrincipalUser':"DDD", 'ConnectTelNo':"8700004", 'Faxes':"8740004"},
-			{'DepartId':'5', 'DepartName':"部门E", 'PrincipalUser':"EEE", 'ConnectTelNo':"8700005", 'Faxes':"8750005"}
+			{'departId':'1', 'departName':"部门A", 'principalUser':"AAA", 'connectTelNo':"8700001", 'faxes':"8710001"},
+			{'departId':'2', 'departName':"部门B", 'principalUser':"BBB", 'connectTelNo':"8700002", 'faxes':"8720002"},
+			{'departId':'3', 'departName':"部门C", 'principalUser':"CCC", 'connectTelNo':"8700003", 'faxes':"8730003"},
+			{'departId':'4', 'departName':"部门D", 'principalUser':"DDD", 'connectTelNo':"8700004", 'faxes':"8740004"},
+			{'departId':'5', 'departName':"部门E", 'principalUser':"EEE", 'connectTelNo':"8700005", 'faxes':"8750005"}
 		]
 	},
 	//pageSize:2,
@@ -28,6 +28,6 @@ Ext.define('Admin.store.glstore.xtgl.bmgl.BmglGridStore', {
 
     sorters: {
         direction: 'ASC',
-        property: 'DepartId'
+        property: 'departId'
     }
 });

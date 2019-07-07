@@ -7,9 +7,9 @@ Ext.define('Admin.store.glstore.cwgl.srzm.SrzmGridStore', {
 	data: {
 		'lists':
 		[
-			{'InAccountId':'1','InName':'收入A','InAmoubt':"10000", 'Inspecter':"AAA"},
-			{'InAccountId':'2','InName':'收入B','InAmoubt':"20000", 'Inspecter':"bbb"},
-			{'InAccountId':'3','InName':'收入C','InAmoubt':"5000", 'Inspecter':"ddd"}
+			{'inAccountId':'1','inName':'收入A','inAmoubt':"10000", 'inspecter':"AAA"},
+			{'inAccountId':'2','inName':'收入B','inAmoubt':"20000", 'inspecter':"bbb"},
+			{'inAccountId':'3','inName':'收入C','inAmoubt':"5000", 'inspecter':"ddd"}
 		]
 	},
 	//pageSize:2,
@@ -27,6 +27,6 @@ Ext.define('Admin.store.glstore.cwgl.srzm.SrzmGridStore', {
 
     sorters: {
         direction: 'ASC',
-        property: 'InAccountId'
+        property: 'inAccountId'
     }
 });

@@ -4,10 +4,10 @@ Ext.define('Admin.model.glmodel.cwgl.zczm.ZczmModel', {
         'Ext.data.proxy.Rest'
     ],
 	fields: [
-		{type: 'int',name: 'OutAccountId'},
-		{type: 'string',name: 'OutName'},
-	    {type: 'string',name: 'OutAmoubt'},
-	    {type: 'string', name: 'Outspecter'}
+		{type: 'int',name: 'outAccountId'},
+		{type: 'string',name: 'outName'},
+	    {type: 'string',name: 'outAmoubt'},
+	    {type: 'string', name: 'outspecter'}
 	]
 	
 });

@@ -85,7 +85,7 @@ Ext.define('Admin.view.ggxx.gxwj.GxwjPanel',{
             {
                 xtype: 'gridcolumn',
                 cls: 'content-column',
-                dataIndex: 'fileType',
+                dataIndex: 'bdflId',
                 text: '文件类型',
                 flex: 1
             },

@@ -63,6 +63,7 @@ Ext.define('Admin.view.xzbg.xjgz.AddWork', {
             fieldLabel: '当前步骤',
             name:'presentStep',
             border:'none',
+            readOnly:true,
             value:0
         }]
     }],

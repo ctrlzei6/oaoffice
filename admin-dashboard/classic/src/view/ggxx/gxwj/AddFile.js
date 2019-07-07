@@ -40,7 +40,7 @@ Ext.define('Admin.view.ggxx.gxwj.AddFile', {
         {
             xtype:'combo',
             fieldLabel:'文件类型：',
-            name: 'fileType',
+            name: 'bdflId',
             value:0,
             //hideLabel: true,
             store: Ext.create('Ext.data.Store', {

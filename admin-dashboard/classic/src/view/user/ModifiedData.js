@@ -20,12 +20,12 @@ Ext.define('Admin.view.user.ModifiedData',{
             xtype:'combo',
             fieldLabel:'性别',
             name: 'sex',
-            value:1,
+            value:'女',
             store: Ext.create('Ext.data.Store', {
                 fields: ['name', 'val'],
                 data: [
-                    {name: '男',val: 0},
-                    {name: '女',val: 1}
+                    {name: '男',val: '男'},
+                    {name: '女',val: '女'}
                 ]
             }),
             queryMode: 'local',
@@ -33,56 +33,47 @@ Ext.define('Admin.view.user.ModifiedData',{
             valueField: 'val',
             triggerAction: 'all',
         },
-        // {
-
-        //     xtype:'combo',
-        //     fieldLabel:'性别',
-        //     //columnWidth: 0.56,
-        //     //reference:'searchFieldName',
-        //     hideLabel: true,
-        //     store:Ext.create("Ext.data.Store", {
-        //         //html:'<div class="main-logo">性别</div>',
-        //         fields: ["name", "value"],
-        //         data: [
-        //             { name: '男', value: 'man' },
-        //             { name: '女', value: 'woman' }
-        //         ]
-                
-        //     }),
-        //     forceSelection : true,
-        //     displayField: 'name',
-        //     valueField:'value',
-        //     editable: false,
-        //     queryMode: 'local',
-        //     triggerAction: 'all',
-        //     value:'allbill',//显示所有值
-        //     allowBlank: false,
-        //     width: 350,
-        //     listeners:{
-        //         load:function(){
-        //             Ext.getCmp('name').setValue(0);
-        //             }
-      
-      
-        //         // afterRender: function(combo) {
-        //         //     　　var firstValue = store.reader.jsonData[0].value;
-        //         //     　　combo.setValue(firstValue);
-        //         // }
-        //     }
         
-        //     //logTypeCombo.setValue( logTypeCombo.store.getAt(0).get('key') );
-        // },
-        {
-            xtype: 'datefield',
-            fieldLabel: '出生日期',
-            name:'birthday',
-            format: 'Y/m/d H:i:s',
-            columnWidth: 0.96
-        },
         {
             fieldLabel: '电话',
             name: 'phone',
             columnWidth: 0.96
+        },
+        {
+            xtype:'combo',
+            fieldLabel:'部门',
+            name: 'departId',
+            value:0,
+            store: Ext.create('Ext.data.Store', {
+                fields: ['name', 'val'],
+                data: [
+                    {name: '部门1',val: 0},
+                    {name: '部门2',val: 1}
+                ]
+            }),
+            queryMode: 'local',
+            displayField: 'name',
+            valueField: 'val',
+            triggerAction: 'all',
+            columnWidth: 0.51
+        },
+        {
+            xtype:'combo',
+            fieldLabel:'职位',
+            name: 'roleId',
+            value:0,
+            store: Ext.create('Ext.data.Store', {
+                fields: ['name', 'val'],
+                data: [
+                    {name: '职位1',val: 0},
+                    {name: '职位2',val: 1}
+                ]
+            }),
+            queryMode: 'local',
+            displayField: 'name',
+            valueField: 'val',
+            triggerAction: 'all',
+            columnWidth: 0.51
         }
     ],
     buttons: [{

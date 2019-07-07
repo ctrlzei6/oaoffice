@@ -6,11 +6,11 @@ Ext.define('Admin.model.glmodel.cggl.cgdd.CgddModel', {
     ],
 
 	fields: [
-		{type: 'int',name: 'OrderId'},
-		{type: 'string',name: 'OrderName'},
-	    {type: 'string',name: 'OrderTxt'},
-	    {type: 'date',name: 'OrderDate'},
-	    {type: 'string', name: 'AssePerson'}
+		{type: 'int',name: 'orderId'},
+		{type: 'string',name: 'orderName'},
+	    {type: 'string',name: 'orderTxt'},
+	    {type: 'date',name: 'orderDate'},
+	    {type: 'string', name: 'assePerson'}
 	]
 	
 	

@@ -18,12 +18,12 @@ Ext.define('Admin.view.xtgl.yggl.YgglPanel', {
             bind: '{userLists}',
             scrollable: false,
             columns: [
-                {xtype: 'gridcolumn',width: 70,dataIndex: 'UserId',text: 'ID'},
-                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'UserName',text: '员工名称'},
-                {xtype: 'gridcolumn',width: 150, cls: 'content-column',hidden:true,dataIndex: 'PassWord',text: '密码'},
-                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'DepartId',text: '部门'},
-                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'Gender',text: '性别'},
-                {xtype: 'gridcolumn',width: 150,cls: 'content-column',dataIndex: 'RoleId',text: '角色'},
+                {xtype: 'gridcolumn',width: 70,dataIndex: 'userId',text: 'ID'},
+                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'userName',text: '员工名称'},
+                {xtype: 'gridcolumn',width: 150, cls: 'content-column',hidden:true,dataIndex: 'passWord',text: '密码'},
+                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'departId',text: '部门'},
+                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'gender',text: '性别'},
+                {xtype: 'gridcolumn',width: 150,cls: 'content-column',dataIndex: 'roleId',text: '角色'},
 
                 {xtype: 'actioncolumn',cls: 'content-column', width: 120,dataIndex: 'bool',text: '查看/编辑/删除',tooltip: 'edit ',
                     items: [
@@ -40,13 +40,13 @@ Ext.define('Admin.view.xtgl.yggl.YgglPanel', {
                 store:Ext.create("Ext.data.Store", {
                     fields: ["name", "value"],
                     data: [
-                        { name: '员工ID', value: 'UserId' },
-                        { name: '员工名称', value: 'UserName' }
+                        { name: '员工ID', value: 'userId' },
+                        { name: '员工名称', value: 'userName' }
                     ]
                 }),
                 displayField: 'name',
                 valueField:'value',
-                value:'UserId',
+                value:'userId',
                 editable: false,
                 queryMode: 'local',
                 triggerAction: 'all',

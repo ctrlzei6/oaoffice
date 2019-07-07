@@ -18,10 +18,10 @@ Ext.define('Admin.view.cwgl.zczm.ZczmPanel', {
             bind: '{outAccountLists}',
             scrollable: false,
             columns: [
-                {xtype: 'gridcolumn',width: 70,dataIndex: 'OutAccountId',text: 'ID'},
-                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'OutName',text: '支出项名'},
-                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'OutAmoubt',text: '支出数额'},
-                {xtype: 'gridcolumn',width: 150,cls: 'content-column',dataIndex: 'Outspecter',text: '账目检验员'},
+                {xtype: 'gridcolumn',width: 70,dataIndex: 'outAccountId',text: 'ID'},
+                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'outName',text: '支出项名'},
+                {xtype: 'gridcolumn',width: 150, cls: 'content-column',dataIndex: 'outAmoubt',text: '支出数额'},
+                {xtype: 'gridcolumn',width: 150,cls: 'content-column',dataIndex: 'outspecter',text: '账目检验员'},
 
                 {xtype: 'actioncolumn',cls: 'content-column', width: 120,dataIndex: 'bool',text: '查看/编辑/删除',tooltip: 'edit ',
                     items: [
@@ -38,13 +38,13 @@ Ext.define('Admin.view.cwgl.zczm.ZczmPanel', {
                 store:Ext.create("Ext.data.Store", {
                     fields: ["name", "value"],
                     data: [
-                        { name: '支出ID', value: 'OutAccountId' },
-                        { name: '支出项名', value: 'OutName' }
+                        { name: '支出ID', value: 'outAccountId' },
+                        { name: '支出项名', value: 'outName' }
                     ]
                 }),
                 displayField: 'name',
                 valueField:'value',
-                value:'OutAccountId',
+                value:'outAccountId',
                 editable: false,
                 queryMode: 'local',
                 triggerAction: 'all',
