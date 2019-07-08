@@ -1,6 +1,7 @@
 Ext.define('Admin.store.glstore.xtgl.Yggl.YgglGridStore', {
     extend: 'Ext.data.Store',
     alias: 'store.ygglGridStore',
+    storeId:'ygglGridStore',
 	model: 'Admin.model.glmodel.xtgl.Yggl.YgglModel', 
 	
 	data: {

@@ -11,7 +11,11 @@ Ext.define('Admin.model.glmodel.cggl.cgdd.CgddModel', {
 	    {type: 'string',name: 'orderTxt'},
 	    {type: 'date',name: 'orderDate'},
 	    {type: 'string', name: 'assePerson'}
-	]
+	],
+    proxy: {
+		type: 'rest',
+		url: '/cgdd',
+	}
 	
 	
 });

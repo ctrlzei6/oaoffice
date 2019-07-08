@@ -12,6 +12,9 @@ Ext.define('Admin.model.glmodel.khgl.wdkh.WdkhModel', {
         {type: 'string', name: 'intro'}
         //fields data dataFormat:'Y/m/d H:i:s'
         //{type: 'data', name: 'data',dataFormat:'Y/m/d H:i:s'}
-	]
-
+	],
+    proxy: {
+		type: 'rest',
+		url: '/wdkh',
+	}
 });

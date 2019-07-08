@@ -1,7 +1,7 @@
 Ext.define('Admin.store.glstore.htgl.htgl.HtglGridStore', {
     extend: 'Ext.data.Store',
     alias: 'store.htglGridStore',
-	
+	storeId:'htglGridStore',
 	model: 'Admin.model.glmodel.htgl.htgl.HtglModel', 
 	
 	data: {

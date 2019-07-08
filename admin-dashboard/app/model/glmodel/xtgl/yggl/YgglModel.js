@@ -4,11 +4,15 @@ Ext.define('Admin.model.glmodel.xtgl.Yggl.YgglModel', {
         'Ext.data.proxy.Rest'
     ],
 	fields: [
-	    {type: 'string',name: 'userId'},
+	    {type: 'int',name: 'userId'},
         {type: 'string', name: 'userName'},
         {type: 'string', name: 'passWord'},
         {type: 'int',name: 'departId'},
         {type: 'string',name: 'gender'},
 		{type: 'int',name: 'roleId'}
-	]
+	],
+    proxy: {
+		type: 'rest',
+		url: '/wdkh',
+	}
 });

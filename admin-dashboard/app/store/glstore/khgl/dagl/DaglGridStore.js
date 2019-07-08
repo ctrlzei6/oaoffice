@@ -1,7 +1,7 @@
 Ext.define('Admin.store.glstore.khgl.dagl.DaglGridStore', {
     extend: 'Ext.data.Store',
 	alias: 'store.daglGridStore',
-	
+	storeId:'daglGridStore',
 	model: 'Admin.model.glmodel.khgl.dagl.DaglModel', 
 
 	

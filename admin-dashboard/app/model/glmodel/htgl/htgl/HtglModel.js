@@ -11,7 +11,11 @@ Ext.define('Admin.model.glmodel.htgl.htgl.HtglModel', {
 	    {type: 'string',name: 'compactTxt'},
 	    {type: 'date',name: 'compactqdrq',dataFormat:'Y/m/d'},
 	    {type: 'date', name: 'compactqixian',dataFormat:'Y/m/d'}
-	]
+	],
+    proxy: {
+		type: 'rest',
+		url: '/htgl',
+	}
 	
 	
 });

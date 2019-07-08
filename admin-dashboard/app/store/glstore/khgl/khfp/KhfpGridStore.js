@@ -1,7 +1,7 @@
 Ext.define('Admin.store.glstore.khgl.khfp.KhfpGridStore', {
     extend: 'Ext.data.Store',
 	alias: 'store.khfpGridStore',
-	
+	storeId:'khfpGridStore',
 	model: 'Admin.model.glmodel.khgl.khfp.KhfpModel', 
 
 	

@@ -1,7 +1,7 @@
 Ext.define('Admin.store.glstore.cwgl.zczm.ZczmGridStore', {
     extend: 'Ext.data.Store',
     alias: 'store.zczmGridStore',
-	
+	storeId:'zczmGridStore',
 	model: 'Admin.model.glmodel.cwgl.zczm.ZczmModel', 
 	
 	data: {

@@ -1,7 +1,7 @@
 Ext.define('Admin.store.glstore.cggl.cgdd.CgddGridStore', {
     extend: 'Ext.data.Store',
     alias: 'store.cgddGridStore',
-	
+	storeId:'cgddGridStore',
 	model: 'Admin.model.glmodel.cggl.cgdd.CgddModel', 
 	
 	data: {

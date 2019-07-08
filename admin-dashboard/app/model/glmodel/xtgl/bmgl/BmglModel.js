@@ -9,6 +9,10 @@ Ext.define('Admin.model.glmodel.xtgl.bmgl.BmglModel', {
 		{type: 'string', name: 'principalUser'},
 		{type: 'int',name: 'connectTelNo'},
 		{type: 'int',name: 'faxes'}
-	]
+	],
+    proxy: {
+		type: 'rest',
+		url: '/wdkh',
+	}
 	
 });

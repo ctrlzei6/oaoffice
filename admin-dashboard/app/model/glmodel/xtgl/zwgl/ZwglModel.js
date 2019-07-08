@@ -7,5 +7,9 @@ Ext.define('Admin.model.glmodel.xtgl.zwgl.ZwglModel', {
         {type: 'int',name: 'roleId'},
 	    {type: 'string',name: 'roleName'},
         {type: 'string', name: 'roleDesc'},
-	]
+	],
+    proxy: {
+		type: 'rest',
+		url: '/wdkh',
+	}
 });

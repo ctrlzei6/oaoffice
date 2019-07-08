@@ -1,7 +1,7 @@
 Ext.define('Admin.store.glstore.khgl.wdkh.WdkhGridStore', {
     extend: 'Ext.data.Store',
 	alias: 'store.wdkhGridStore',
-	
+	storeId:'wdkhGridStore',
 	model: 'Admin.model.glmodel.khgl.wdkh.WdkhModel', 
 
 	
@@ -26,7 +26,7 @@ Ext.define('Admin.store.glstore.khgl.wdkh.WdkhGridStore', {
 
 
 	//autoSync: ture, //连接后台修改store自动触发rest请求
-	//pageSize:2,
+	pageSize:2,
     autoLoad: 'true',
 
     sorters: {

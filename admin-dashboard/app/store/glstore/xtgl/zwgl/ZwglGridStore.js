@@ -1,7 +1,8 @@
 Ext.define('Admin.store.glstore.xtgl.zwgl.ZwglGridStore', {
     extend: 'Ext.data.Store',
     alias: 'store.zwglGridStore',
-	//Admin.model.glmodel.xtgl.zwgl.ZwglModel
+    //Admin.model.glmodel.xtgl.zwgl.ZwglModel
+    storeId:'zwglGridStore',
 	model: 'Admin.model.glmodel.xtgl.zwgl.ZwglModel', 
 	data: {
 		'lists':

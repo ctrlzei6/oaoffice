@@ -1,6 +1,7 @@
 Ext.define('Admin.store.glstore.xtgl.bmgl.BmglGridStore', {
     extend: 'Ext.data.Store',
-    alias: 'store.bmglGridStore',
+	alias: 'store.bmglGridStore',
+	storeId:'bmglGridStore',
 	model: 'Admin.model.glmodel.xtgl.bmgl.BmglModel', 
 	
 	data: {

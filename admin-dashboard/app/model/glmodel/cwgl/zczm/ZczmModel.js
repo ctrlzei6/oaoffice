@@ -8,6 +8,10 @@ Ext.define('Admin.model.glmodel.cwgl.zczm.ZczmModel', {
 		{type: 'string',name: 'outName'},
 	    {type: 'string',name: 'outAmoubt'},
 	    {type: 'string', name: 'outspecter'}
-	]
+	],
+    proxy: {
+		type: 'rest',
+		url: '/zczm',
+	}
 	
 });

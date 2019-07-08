@@ -58,7 +58,7 @@ Ext.define('Admin.view.khgl.dagl.DaglPanel', {
 	        }, '-',{
             	xtype:'textfield',
             	reference:'searchFieldValue',
-            	name:'orderPanelSearchField'
+            	name:'daglPanelSearchField'
             }, 
             '-',{
 		        text: '查询',
