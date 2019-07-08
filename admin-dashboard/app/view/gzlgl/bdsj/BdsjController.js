@@ -33,7 +33,7 @@ Ext.define('Admin.view.xzbg.gggl.BdsjController',{
             icon: Ext.Msg.QUESTION,
             fn: function (btn) {
                 if (btn === 'yes') {
-                    var key = grid.selModel.getLastSelected().get('id');    
+                    var key = grid.selModel.getLastSelected().get('bdId');    
                     Ext.Ajax.request({
                         url: URL + key,
                         success: function (response, opts) {
@@ -52,14 +52,24 @@ Ext.define('Admin.view.xzbg.gggl.BdsjController',{
 	},
 
     /*Add Submit*/	
-	submitAddGg:function(btn){
+	submitAddBdsj:function(btn){
 		var win    = btn.up('window');
 		var form = win.down('form');
-		var record = Ext.create('Admin.model.Ggdata');
+		var record = Ext.create('Admin.model.BdsjModel');
 		var values  =form.getValues();//获取form数据
 		record.set(values);
 		record.save();
-		Ext.data.StoreManager.lookup('ggData').load();
+		Ext.data.StoreManager.lookup('bdsjData').load();
+		win.close();
+    },
+    //修改按钮
+    submitEditBdsj:function(btn){
+		var win    = btn.up('window');
+		var store = Ext.data.StoreManager.lookup('bdsjData');
+		var values  = win.down('form').getValues();//获取form数据
+		var record = store.getById(values.bdId);//获取id获取store中的数据
+		record.set(values);//rest put 
+		//store.load();
 		win.close();
 	},
 

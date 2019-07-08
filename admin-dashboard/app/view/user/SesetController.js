@@ -16,6 +16,15 @@ Ext.define('Admin.view.user.SesetController', {
             //取消模型的更改
             model.reject();
         }
-    }
-    
+    },
+
+    onSave:function(btn){
+		var win    = btn.up('window');
+		var store = Ext.data.StoreManager.lookup('Lookcheckmodel');
+		var values  = win.down('form').getValues();//获取form数据
+		var record = store.getById(values.userId);//获取id获取store中的数据
+		record.set(values);//rest put 
+		//store.load();
+		win.close();
+    },
 });

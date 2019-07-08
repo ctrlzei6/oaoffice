@@ -4,6 +4,8 @@ Ext.define('Admin.view.grbg.dbsy.DbsyController',{
     // dispose:function(grid, rowIndex, colIndex){
     //     var win = grid.up('dbsy').add(Ext.widget('dispose')).show();
     // },
+
+    //批准
     approve:function(grid, rowIndex, colIndex){
         Ext.Msg.show({
             title: '提示',

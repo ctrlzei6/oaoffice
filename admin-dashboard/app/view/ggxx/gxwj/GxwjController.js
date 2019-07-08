@@ -34,7 +34,7 @@ Ext.define('Admin.view.ggxx.gxwj.GxwjController',{
         icon: Ext.Msg.QUESTION,
         fn: function (btn) {
             if (btn === 'yes') {
-                var key = grid.selModel.getLastSelected().get('fileId');    
+                var key = grid.selModel.getLastSelected().get('id');    
                 Ext.Ajax.request({
                     url: URL + key,
                     success: function (response, opts) {
@@ -50,12 +50,54 @@ Ext.define('Admin.view.ggxx.gxwj.GxwjController',{
         }
     })
 
-	},
+    },
+    //查询
+    onSearch:function(btn){
+		var searchField = this.lookupReference('searchFieldName').getValue();
+		var searchValue = this.lookupReference('searchFieldValue').getValue();
+
+		var store =	btn.up('gridpanel').getStore();
+		//var store = Ext.getCmp('userGridPanel').getStore();// Ext.getCmp(）需要在OrderPanel设置id属性
+		Ext.apply(store.proxy.extraParams, {fileId:"",fileName:""});
+		
+		if(searchField==='fileId'){
+			Ext.apply(store.proxy.extraParams, {ggTheme:searchValue});
+		}
+		if(searchField==='fileName'){
+			Ext.apply(store.proxy.extraParams, {ggContent:searchValue});
+			// 	createTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
+			// 	createTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
+			// });
+		}
+		//store.load({params:{start:0, limit:20, page:1}});
+    },
+    //新建提交按钮
     // submitAddForm:function(btn){
     //     var form = btn.up('window').down('form');
-    //     //form.getValues();
+    //     form.getValues();
     //     //更新事件
     // },
+
+    submitAddForm:function(btn){
+		var win    = btn.up('window');
+		var form = win.down('form');
+		var record = Ext.create('Admin.model.FileModel');
+		var values  =form.getValues();//获取form数据
+		record.set(values);
+		record.save();
+		Ext.data.StoreManager.lookup('fileData').load();
+		win.close();
+    },
+    //编辑提交按钮
+    submitEditForm:function(btn){
+		var win    = btn.up('window');
+		var store = Ext.data.StoreManager.lookup('fileData');
+		var values  = win.down('form').getValues();//获取form数据
+		var record = store.getById(values.id);//获取id获取store中的数据
+		record.set(values);//rest put 
+		//store.load();
+		win.close();
+	},
     // onDeleteClick: function () {
     //     //获取待删除项
     //     var rec = this.getView().getSelectionModel().getSelection()[0];

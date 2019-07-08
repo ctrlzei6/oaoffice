@@ -76,7 +76,7 @@ Ext.define('Admin.view.xzbg.gggl.Edit', {
 	buttons: ['->',{
         xtype: 'button',
         text: '发布',
-        handler: 'submitAddForm'
+        handler: 'submitAddGg'
     },{
         xtype: 'button',
         text: '取消',

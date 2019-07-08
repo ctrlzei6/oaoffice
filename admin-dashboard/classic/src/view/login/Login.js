@@ -64,12 +64,26 @@ Ext.define('Admin.view.login.Login',{
 
             value: '用户名密码不能为空'
 
+        },
+        {
+            xtype: 'container',
+            layout: 'hbox',
+            items: [{
+                xtype: 'checkboxfield',
+                flex: 1,
+                cls: 'form-panel-font-color rememberMeCheckbox',
+                height: 30,
+                inputValue: 1,
+                name: 'persist',
+                bind: '{persist}',
+                boxLabel: '记住我'
+            }]
         }],
-
+        
         buttons: [{
 
             text: '登录',
-
+            
             formBind: true,
 
             listeners: {

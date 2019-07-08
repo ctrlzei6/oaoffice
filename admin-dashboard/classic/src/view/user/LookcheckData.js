@@ -29,6 +29,7 @@ Ext.define('Admin.view.user.LookcheckData',{
             items: [{
                 xtype: 'textfield',
                 dataIndex:'userId',
+                bind:'{userId}', 
                 fieldLabel: '用户号' ,
                 readOnly: true
             }, {

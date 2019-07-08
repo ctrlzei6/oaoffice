@@ -61,6 +61,36 @@ Ext.define('Admin.view.xzbg.gggl.GglController',{
 		record.save();
 		Ext.data.StoreManager.lookup('ggData').load();
 		win.close();
+    },
+    //编辑提交按钮
+    submitAddGg:function(btn){
+		var win    = btn.up('window');
+		var store = Ext.data.StoreManager.lookup('ggData');
+		var values  = win.down('form').getValues();//获取form数据
+		var record = store.getById(values.id);//获取id获取store中的数据
+		record.set(values);//rest put 
+		//store.load();
+		win.close();
+    },
+    //查询
+    onSearch:function(btn){
+		var searchField = this.lookupReference('searchFieldName').getValue();
+		var searchValue = this.lookupReference('searchFieldValue').getValue();
+
+		var store =	btn.up('gridpanel').getStore();
+		//var store = Ext.getCmp('userGridPanel').getStore();// Ext.getCmp(）需要在OrderPanel设置id属性
+		Ext.apply(store.proxy.extraParams, {ggTheme:"",ggContent:""});
+		
+		if(searchField==='ggTheme'){
+			Ext.apply(store.proxy.extraParams, {ggTheme:searchValue});
+		}
+		if(searchField==='ggContent'){
+			Ext.apply(store.proxy.extraParams, {ggContent:searchValue});
+			// 	createTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
+			// 	createTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
+			// });
+		}
+		//store.load({params:{start:0, limit:20, page:1}});
 	},
 
 });

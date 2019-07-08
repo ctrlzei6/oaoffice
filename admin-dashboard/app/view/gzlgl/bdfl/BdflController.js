@@ -33,7 +33,7 @@ Ext.define('Admin.view.xzbg.gggl.BdflController',{
             icon: Ext.Msg.QUESTION,
             fn: function (btn) {
                 if (btn === 'yes') {
-                    var key = grid.selModel.getLastSelected().get('id');    
+                    var key = grid.selModel.getLastSelected().get('bdflId');    
                     Ext.Ajax.request({
                         url: URL + key,
                         success: function (response, opts) {
@@ -62,6 +62,7 @@ Ext.define('Admin.view.xzbg.gggl.BdflController',{
 		Ext.data.StoreManager.lookup('bdflData').load();
 		win.close();
     },
+
     //修改按钮
     submitEditBdfl:function(btn){
 		var win    = btn.up('window');
