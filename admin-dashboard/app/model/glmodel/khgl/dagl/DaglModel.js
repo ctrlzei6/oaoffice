@@ -13,6 +13,10 @@ Ext.define('Admin.model.glmodel.khgl.dagl.DaglModel', {
         {type: 'string', name: 'departName'}
         //fields data dataFormat:'Y/m/d H:i:s'
         //{type: 'data', name: 'data',dataFormat:'Y/m/d H:i:s'}
-	]
+	],
+    proxy: {
+		type: 'rest',
+		url: '../dagl',
+	}
 
 });

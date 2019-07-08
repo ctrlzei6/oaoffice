@@ -17,7 +17,8 @@ Ext.define('Admin.store.glstore.khgl.wdkh.WdkhGridStore', {
 
     proxy: {
         type: 'memory',					//后台rest
-        //url: '~api/search/users'	//mvc url  xxx.json
+		//url: '~api/search/users'	//mvc url  xxx.json
+		url: '../wdkh',
 	    reader:{
 	    	type:'json',
 	    	rootProperty:'cilents'

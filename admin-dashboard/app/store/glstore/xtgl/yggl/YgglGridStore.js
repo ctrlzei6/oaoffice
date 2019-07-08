@@ -1,8 +1,8 @@
-Ext.define('Admin.store.glstore.xtgl.Yggl.YgglGridStore', {
+Ext.define('Admin.store.glstore.xtgl.yggl.YgglGridStore', {
     extend: 'Ext.data.Store',
     alias: 'store.ygglGridStore',
     storeId:'ygglGridStore',
-	model: 'Admin.model.glmodel.xtgl.Yggl.YgglModel', 
+	model: 'Admin.model.glmodel.xtgl.yggl.YgglModel', 
 	
 	data: {
 		'lists':
@@ -18,6 +18,7 @@ Ext.define('Admin.store.glstore.xtgl.Yggl.YgglGridStore', {
     proxy: {
         type: 'memory',
         //url: '~api/search/users'	//mvc url  xxx.json
+        url: '../yggl',
 	    reader:{
 	    	type:'json',
 	    	rootProperty:'lists'

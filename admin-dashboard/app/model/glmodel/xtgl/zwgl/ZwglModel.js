@@ -10,6 +10,6 @@ Ext.define('Admin.model.glmodel.xtgl.zwgl.ZwglModel', {
 	],
     proxy: {
 		type: 'rest',
-		url: '/wdkh',
+		url: '../zwgl',
 	}
 });

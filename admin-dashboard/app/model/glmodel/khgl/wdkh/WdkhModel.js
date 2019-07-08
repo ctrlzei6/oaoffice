@@ -15,6 +15,6 @@ Ext.define('Admin.model.glmodel.khgl.wdkh.WdkhModel', {
 	],
     proxy: {
 		type: 'rest',
-		url: '/wdkh',
+		url: '../wdkh',
 	}
 });

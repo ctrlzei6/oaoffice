@@ -13,6 +13,6 @@ Ext.define('Admin.model.glmodel.cwgl.srzm.SrzmModel', {
 	],
     proxy: {
 		type: 'rest',
-		url: '/srzm',
+		url: '../srzm',
 	}
 });

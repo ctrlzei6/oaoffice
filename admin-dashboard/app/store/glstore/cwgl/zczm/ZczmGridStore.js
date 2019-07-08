@@ -15,11 +15,13 @@ Ext.define('Admin.store.glstore.cwgl.zczm.ZczmGridStore', {
 	//pageSize:2,
 
     proxy: {
-        type: 'memory',
+		type: 'memory',
+		url: '../zczm',
+			
         //url: '~api/search/users'	//mvc url  xxx.json
 	    reader:{
 	    	type:'json',
-	    	rootProperty:'lists'
+			rootProperty:'lists'
 	    }
     },
 

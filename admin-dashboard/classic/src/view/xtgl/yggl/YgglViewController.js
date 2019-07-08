@@ -97,7 +97,7 @@ Ext.define('Admin.view.xtgl.yggl.YgglViewController', {
 	submitAddForm:function(btn){
 		var win    = btn.up('window');
 		var form = win.down('form');
-		var record = Ext.create('Admin.model.glmodel.xtgl.Yggl.YgglModel');
+		var record = Ext.create('Admin.model.glmodel.xtgl.yggl.YgglModel');
 		var values  =form.getValues();//获取form数据
 		record.set(values);
 		record.save();

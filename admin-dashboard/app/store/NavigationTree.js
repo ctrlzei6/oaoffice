@@ -106,12 +106,12 @@ Ext.define('Admin.store.NavigationTree', {
             },
             {
                 text: '客户管理',
-                iconCls: 'x-fa  fa-address-card-o',
+                iconCls: 'x-fa   fa-male',
                 //viewType: 'khgl',
                 children: [
                     {
                         text: '客户档案',
-                        iconCls: 'x-fa fa-file-o',
+                        iconCls: 'x-fa fa-address-card-o',
                         viewType: 'dagl',
                         routeId: 'dashboard', 
                         leaf: true
@@ -119,13 +119,13 @@ Ext.define('Admin.store.NavigationTree', {
 
                     {
                         text: '我的客户',
-                        iconCls: 'x-fa fa-exclamation-triangle',
+                        iconCls: 'x-fa fa-address-book',
                         viewType: 'wdkh',
                         leaf: true
                     },
                     {
                         text: '客户分派',
-                        iconCls: 'x-fa fa-times-circle',
+                        iconCls: 'x-fa fa-handshake-o',
                         viewType: 'khfp',
                         leaf: true
                     }
@@ -134,7 +134,7 @@ Ext.define('Admin.store.NavigationTree', {
 
             {
                 text: '合同管理',
-                iconCls: 'x-fa  fa-bars',
+                iconCls: 'x-fa   fa-file',
                 //viewType: 'htgl',
                 //expanded: false,
                 //selectable: false,
@@ -149,7 +149,7 @@ Ext.define('Admin.store.NavigationTree', {
 
                     {
                         text: '合同统计',
-                        iconCls: 'x-fa fa-exclamation-triangle',
+                        iconCls: 'x-fa fa-list-alt ',
                         viewType: 'httj',
                         leaf: true
                     }
@@ -158,7 +158,7 @@ Ext.define('Admin.store.NavigationTree', {
             
             {
                 text: '采购管理',
-                iconCls: 'x-fa  fa-bars',
+                iconCls: 'x-fa   fa-table',
                 //viewType: 'cggl',
                 //expanded: false,
                 //selectable: false,
@@ -166,14 +166,14 @@ Ext.define('Admin.store.NavigationTree', {
                 children: [
                     {
                         text: '采购订单',
-                        iconCls: 'x-fa fa-file-o',
+                        iconCls: 'x-fa  fa-yelp',
                         viewType: 'cgdd',
                         leaf: true
                     },
 
                     {
                         text: '历史查询',
-                        iconCls: 'x-fa fa-exclamation-triangle',
+                        iconCls: 'x-fa  fa-tv',
                         viewType: 'lscx',
                         leaf: true
                     }
@@ -182,7 +182,7 @@ Ext.define('Admin.store.NavigationTree', {
 
             {
                 text: '财务管理',
-                iconCls: 'x-fa  fa-bars',
+                iconCls: 'x-fa  fa-money',
                 //viewType: 'cwgl',
                 //expanded: false,
                 //selectable: false,
@@ -190,14 +190,14 @@ Ext.define('Admin.store.NavigationTree', {
                 children: [
                     {
                         text: '支出账目',
-                        iconCls: 'x-fa fa-file-o',
+                        iconCls: 'x-fa fa-long-arrow-left',
                         viewType: 'zczm',
                         leaf: true
                     },
 
                     {
                         text: '收入账目',
-                        iconCls: 'x-fa fa-exclamation-triangle',
+                        iconCls: 'x-fa  fa-long-arrow-right',
                         viewType: 'srzm',
                         leaf: true
                     }
@@ -214,19 +214,19 @@ Ext.define('Admin.store.NavigationTree', {
                 children: [
                     {
                         text: '员工管理',
-                        iconCls: 'x-fa fa-file-o',
+                        iconCls: 'x-fa fa-user',
                         viewType: 'yggl',
                         leaf: true
                     },
                     {
                         text: '职务管理',
-                        iconCls: 'x-fa fa-file-o',
+                        iconCls: 'x-fa fa-users',
                         viewType: 'zwgl',
                         leaf: true
                     },
                     {
                         text: '部门管理',
-                        iconCls: 'x-fa fa-exclamation-triangle',
+                        iconCls: 'x-fa fa-user-circle-o',
                         viewType: 'bmgl',
                         leaf: true
                     }

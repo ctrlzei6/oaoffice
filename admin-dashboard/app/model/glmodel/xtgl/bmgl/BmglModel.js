@@ -12,7 +12,7 @@ Ext.define('Admin.model.glmodel.xtgl.bmgl.BmglModel', {
 	],
     proxy: {
 		type: 'rest',
-		url: '/wdkh',
+		url: '../bmgl',
 	}
 	
 });

@@ -14,7 +14,7 @@ Ext.define('Admin.model.glmodel.cggl.cgdd.CgddModel', {
 	],
     proxy: {
 		type: 'rest',
-		url: '/cgdd',
+		url: '../cgdd',
 	}
 	
 	

@@ -20,7 +20,8 @@ Ext.define('Admin.store.glstore.khgl.dagl.DaglGridStore', {
 
     proxy: {
         type: 'memory',					//后台rest
-        //url: '~api/search/users'	//mvc url  xxx.json
+		//url: '~api/search/users'	//mvc url  xxx.json
+		url: '../dagl',
 	    reader:{
 	    	type:'json',
 	    	rootProperty:'cilents'

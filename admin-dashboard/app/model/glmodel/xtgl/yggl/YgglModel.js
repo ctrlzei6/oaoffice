@@ -1,4 +1,4 @@
-Ext.define('Admin.model.glmodel.xtgl.Yggl.YgglModel', {
+Ext.define('Admin.model.glmodel.xtgl.yggl.YgglModel', {
     extend: 'Admin.model.Base',
     requires: [
         'Ext.data.proxy.Rest'
@@ -13,6 +13,6 @@ Ext.define('Admin.model.glmodel.xtgl.Yggl.YgglModel', {
 	],
     proxy: {
 		type: 'rest',
-		url: '/wdkh',
+		url: '../yggl',
 	}
 });

@@ -16,10 +16,12 @@ Ext.define('Admin.store.glstore.cggl.cgdd.CgddGridStore', {
 
     proxy: {
         type: 'memory',
-        //url: '~api/search/users'	//mvc url  xxx.json
+		//url: '~api/search/users'	//mvc url  xxx.json
+		url: '../cgdd',
 	    reader:{
 	    	type:'json',
-	    	rootProperty:'lists'
+			rootProperty:'lists'
+			
 	    }
     },
 

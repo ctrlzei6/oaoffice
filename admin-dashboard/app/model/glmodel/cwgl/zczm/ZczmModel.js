@@ -11,7 +11,7 @@ Ext.define('Admin.model.glmodel.cwgl.zczm.ZczmModel', {
 	],
     proxy: {
 		type: 'rest',
-		url: '/zczm',
+		url: '../zczm',
 	}
 	
 });

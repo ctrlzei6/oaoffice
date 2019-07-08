@@ -20,7 +20,8 @@ Ext.define('Admin.store.glstore.khgl.khfp.KhfpGridStore', {
 
     proxy: {
         type: 'memory',					//后台rest
-        //url: '~api/search/users'	//mvc url  xxx.json
+		//url: '~api/search/users'	//mvc url  xxx.json
+		url: '../khfp',
 	    reader:{
 	    	type:'json',
 	    	rootProperty:'cilents'

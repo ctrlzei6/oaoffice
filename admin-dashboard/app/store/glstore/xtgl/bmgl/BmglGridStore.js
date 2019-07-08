@@ -18,7 +18,8 @@ Ext.define('Admin.store.glstore.xtgl.bmgl.BmglGridStore', {
 
     proxy: {
         type: 'memory',
-        //url: '~api/search/users'	//mvc url  xxx.json
+		//url: '~api/search/users'	//mvc url  xxx.json
+		url: '../bmgl',
 	    reader:{
 	    	type:'json',
 	    	rootProperty:'lists'

@@ -14,11 +14,13 @@ Ext.define('Admin.store.glstore.htgl.htgl.HtglGridStore', {
 	//pageSize:2,
  
     proxy: {
-        type: 'memory',
+		type: 'memory',
+		url: '../htgl',
+		
         //url: '~api/search/users'	//mvc url  xxx.json
 	    reader:{
 	    	type:'json',
-	    	rootProperty:'lists'
+			rootProperty:'lists'
 	    }
     },
 

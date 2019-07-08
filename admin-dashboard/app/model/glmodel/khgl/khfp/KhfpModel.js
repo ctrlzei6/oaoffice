@@ -16,7 +16,7 @@ Ext.define('Admin.model.glmodel.khgl.khfp.KhfpModel', {
 	],
     proxy: {
 		type: 'rest',
-		url: '/khfp',
+		url: '../khfp',
 	}
 
 });

@@ -16,10 +16,11 @@ Ext.define('Admin.store.glstore.cwgl.srzm.SrzmGridStore', {
 
     proxy: {
         type: 'memory',
+		url: '../srzm',
         //url: '~api/search/users'	//mvc url  xxx.json
 	    reader:{
 	    	type:'json',
-	    	rootProperty:'lists'
+			rootProperty:'lists'
 	    }
     },
 

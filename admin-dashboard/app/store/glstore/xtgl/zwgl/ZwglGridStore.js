@@ -18,6 +18,7 @@ Ext.define('Admin.store.glstore.xtgl.zwgl.ZwglGridStore', {
     proxy: {
         type: 'memory',
         //url: '~api/search/users'	//mvc url  xxx.json
+        url: '../zwgl',
 	    reader:{
 	    	type:'json',
 	    	rootProperty:'lists'

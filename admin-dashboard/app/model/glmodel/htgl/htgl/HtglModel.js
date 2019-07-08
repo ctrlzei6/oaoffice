@@ -14,7 +14,7 @@ Ext.define('Admin.model.glmodel.htgl.htgl.HtglModel', {
 	],
     proxy: {
 		type: 'rest',
-		url: '/htgl',
+		url: '../htgl',
 	}
 	
 	
