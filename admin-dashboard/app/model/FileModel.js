@@ -1,6 +1,8 @@
 Ext.define('Admin.model.FileModel', {
     extend: 'Admin.model.Base',
-
+    requires: [
+		'Ext.data.proxy.Rest'
+	],
     fields: [
         //{type: 'int',name: 'id'},
         {type: 'int',name: 'id'},

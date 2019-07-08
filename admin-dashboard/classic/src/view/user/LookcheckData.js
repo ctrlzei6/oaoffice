@@ -25,21 +25,20 @@ Ext.define('Admin.view.user.LookcheckData',{
             ariaLabel: 'check',
             items: [{
                 xtype: 'textfield',
-                width: 220,
-                action:'look',
-                dataIndex:'ggTheme',
-                fieldLabel: '公告主题' ,
+                dataIndex:'userId',
+                fieldLabel: '用户号' ,
                 readOnly: true
             }, {
                 xtype: 'textfield', 
-                fieldLabel: '姓名',
-                dataIndex:'username',
+                fieldLabel: '用户名',
+                name:'username',
+                //bind:'{data.username}',
                 //value:'Lisa',
                 readOnly: true
             },{
                 xtype:'combo',
                 fieldLabel:'部门',
-                dataIndex: 'departId',
+                name: 'departId',
                 //value:0,
                 store: Ext.create('Ext.data.Store', {
                     fields: ['name', 'val'],
@@ -57,8 +56,8 @@ Ext.define('Admin.view.user.LookcheckData',{
             },
             {
                 xtype:'combo',
-                fieldLabel:'职位',
-                dataIndex: 'roleId',
+                name:'roleId',
+                fieldLabel: '职位',
                 //value:0,
                 store: Ext.create('Ext.data.Store', {
                     fields: ['name', 'val'],
@@ -76,14 +75,15 @@ Ext.define('Admin.view.user.LookcheckData',{
             },
             {
                 xtype: 'textfield',
-                fieldLabel: '性别',
-                dataIndex:'gender',
+                name: 'gender',
+                fieldLabel:'性别',
                 //value:'女',
                 readOnly: true
             },{
                 xtype: 'textfield',
                 fieldLabel: '角色',
-                dataIndex:'roleId',
+                name:'roleId',
+                //bind:{data.roleId}
                 //value:'1',
                 readOnly: true
             }

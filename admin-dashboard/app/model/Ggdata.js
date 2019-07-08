@@ -1,6 +1,8 @@
 Ext.define('Admin.model.Ggdata', {
     extend: 'Admin.model.Base',
-
+    requires: [
+		'Ext.data.proxy.Rest'
+	],
     fields: [
         {type: 'int',name: 'identifier'},
         {type: 'string',name: 'ggTheme'},

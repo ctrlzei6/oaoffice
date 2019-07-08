@@ -19,17 +19,17 @@ Ext.define('Admin.view.ggl.GglController',{
 
 		var store =	btn.up('gridpanel').getStore();
 		//var store = Ext.getCmp('userGridPanel').getStore();// Ext.getCmp(）需要在OrderPanel设置id属性
-		Ext.apply(store.proxy.extraParams, {orderNumber:"",createTimeStart:"",createTimeEnd:""});
+		Ext.apply(store.proxy.extraParams, {ggTheme:"",ggContent:""});
 		
-		if(searchField==='orderNumber'){
-			Ext.apply(store.proxy.extraParams, {orderNumber:searchValue});
+		if(searchField==='ggTheme'){
+			Ext.apply(store.proxy.extraParams, {ggTheme:searchValue});
 		}
-		if(searchField==='createTime'){
-			Ext.apply(store.proxy.extraParams,{
-				createTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
-				createTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
-			});
+		if(searchField==='ggContent'){
+			Ext.apply(store.proxy.extraParams, {ggContent:searchValue});
+			// 	createTimeStart:Ext.util.Format.date(searchDataFieldValue, 'Y/m/d H:i:s'),
+			// 	createTimeEnd:Ext.util.Format.date(searchDataFieldValue2, 'Y/m/d H:i:s')
+			// });
 		}
-		store.load({params:{start:0, limit:20, page:1}});
+		//store.load({params:{start:0, limit:20, page:1}});
 	},
 });

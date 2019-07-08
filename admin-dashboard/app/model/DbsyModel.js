@@ -1,6 +1,8 @@
 Ext.define('Admin.model.DbsyModel', {
     extend: 'Admin.model.Base',
-
+    requires: [
+		'Ext.data.proxy.Rest'
+	],
     fields: [
         {type: 'int',name: 'liushuiId'},
         {type: 'string',name: 'workTitle'},

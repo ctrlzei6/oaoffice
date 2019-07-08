@@ -6,9 +6,22 @@ Ext.define('Admin.view.user.DataController', {
 
     onCheckClick: function () {
         Ext.widget('lookcheckData', {
-            title:'资料查看'
-        });
-
+            title:'资料查看',
+                viewModel: {
+                    data: {
+                        //根据rec判断是新增还是修改
+                        //title: rec ? '修改会员卡类型: ' + rec.get('type') : '新增会员卡类型',
+                        //新增则创建一个模型对象
+                        //编辑则直接赋值
+                        //用于新增编辑时操作数据，名称固定为data
+                        data:Ext.create('Admin.model.User')
+                    },
+                    // stores: {
+                    //     //用于新增编辑成功后保存数据，名称固定为store
+                    //     store: this.getStore('basisCardStore')
+                    // }
+                }
+            });
     },
     // onCheckClick:function(grid, rowIndex, colIndex){
     //     var record = grid.getStore().getAt(rowIndex);

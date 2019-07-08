@@ -1,6 +1,8 @@
 Ext.define('Admin.model.User', {
     extend: 'Admin.model.Base',
-
+    requires: [
+		'Ext.data.proxy.Rest'
+	],
     fields: [
         {type: 'int',name: 'userId'},
         {type: 'string',name: 'username'},

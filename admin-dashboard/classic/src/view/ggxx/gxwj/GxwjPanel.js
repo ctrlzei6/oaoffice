@@ -21,8 +21,8 @@ Ext.define('Admin.view.ggxx.gxwj.GxwjPanel',{
             store:Ext.create("Ext.data.Store", {
                 fields: ["name", "value"],
                 data: [
-                      { name: '文件号', value: 'fileNo' },
-                    { name: '文件标题', value: 'fileTitle' }
+                      { name: '文件号', value: 'fileId' },
+                    { name: '文件标题', value: 'fileName' }
                 ]
             }),
             displayField: 'name',
@@ -38,8 +38,8 @@ Ext.define('Admin.view.ggxx.gxwj.GxwjPanel',{
             }
         }, '-',{
             xtype:'textfield',
-            reference:'searchggTheme',
-            name:'gglPanelSearchField'
+            reference:'searchFieldValue',
+            name:'gxwjPanelSearchField'
         }, 
         // '-',{
         //     xtype:'textfield',

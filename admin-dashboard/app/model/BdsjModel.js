@@ -1,6 +1,8 @@
 Ext.define('Admin.model.BdsjModel', {
     extend: 'Admin.model.Base',
-
+    requires: [
+		'Ext.data.proxy.Rest'
+	],
     fields: [
         {type: 'int',name: 'bdId'},
         {type: 'string',name: 'bdName'},
