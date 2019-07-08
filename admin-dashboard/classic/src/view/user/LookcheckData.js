@@ -3,10 +3,12 @@ Ext.define('Admin.view.user.LookcheckData',{
     requires:[
         //'Admin.view.ggl.List',
         'Admin.view.main.MainModel',
-        'Admin.store.user.Userdata'
+        'Admin.store.user.Userdata',
+        'Admin.view.user.LookcheckModel'
     ],
     alias: 'widget.lookcheckData',
     //viewModel: {type: 'userViewModel'},
+
     reference:"lookcheckData",
     xtype:'lookcheckData',
     title:'查看资料',
@@ -23,6 +25,7 @@ Ext.define('Admin.view.user.LookcheckData',{
             layout: 'form',
             padding: '10px',
             ariaLabel: 'check',
+            viewModel:'Lookcheckmodel',
             items: [{
                 xtype: 'textfield',
                 width: 220,
@@ -35,11 +38,13 @@ Ext.define('Admin.view.user.LookcheckData',{
                 fieldLabel: '姓名',
                 dataIndex:'username',
                 //value:'Lisa',
+                bind:'{userName}', 
                 readOnly: true
             },{
                 xtype:'combo',
                 fieldLabel:'部门',
                 dataIndex: 'departId',
+                bind:'{departId}', 
                 //value:0,
                 store: Ext.create('Ext.data.Store', {
                     fields: ['name', 'val'],
@@ -59,6 +64,7 @@ Ext.define('Admin.view.user.LookcheckData',{
                 xtype:'combo',
                 fieldLabel:'职位',
                 dataIndex: 'roleId',
+                bind:'{roleId}', 
                 //value:0,
                 store: Ext.create('Ext.data.Store', {
                     fields: ['name', 'val'],
@@ -79,12 +85,7 @@ Ext.define('Admin.view.user.LookcheckData',{
                 fieldLabel: '性别',
                 dataIndex:'gender',
                 //value:'女',
-                readOnly: true
-            },{
-                xtype: 'textfield',
-                fieldLabel: '角色',
-                dataIndex:'roleId',
-                //value:'1',
+                bind:'{gender}', 
                 readOnly: true
             }
         ]

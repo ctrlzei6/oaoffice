@@ -4,9 +4,22 @@ Ext.define('Admin.view.user.DataController', {
     extend:'Ext.app.ViewController',
     alias: 'controller.data',
 
-    onCheckClick: function () {
+    onCheckClick: function (rec) {
         Ext.widget('lookcheckData', {
-            title:'资料查看'
+            //title:'资料查看'
+            // viewModel:{
+            //     data:{
+            //         'userId':'001', 'userName':"Lisa", 'passWord':"123456",'departId':"1",'gender':"女",'roleId':"1"
+            //     },
+            //     // stores:{
+            //     //     store:this.getStore('ygglGridStore')
+            //     // }
+            // }
+
+
+
+
+
         });
 
     },
