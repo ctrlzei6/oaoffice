@@ -16,6 +16,6 @@ Ext.define('Admin.model.Ggdata', {
     ],
     proxy: {
         type: 'rest',
-        url: '/order',
+        url: '',
     }
 });

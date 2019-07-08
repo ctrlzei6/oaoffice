@@ -7,7 +7,7 @@ Ext.define('Admin.view.xzbg.gggl.Gggl', {
     
     //controller: 'gglViewController',
     //viewModel: {type: 'gglViewModel'},
-    	
+    
     layout: 'fit',
     items: [{xtype:'ggglPanel'}],
 });

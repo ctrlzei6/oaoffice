@@ -6,10 +6,10 @@ Ext.define('Admin.view.login.Login',{
         'Ext.form.Panel'
 
     ],
-    // listeners: {
-    //     //监听页面初始化事件
-    //     render: 'onLoginRender'
-    // },
+    listeners: {
+        //监听页面初始化事件
+        render: 'onLoginRender'
+    },
     controller: 'login',
     title: '用户登录',
     plain: true,
@@ -61,7 +61,7 @@ Ext.define('Admin.view.login.Login',{
             xtype: 'displayfield',
 
             hideEmptyLabel: false,
-
+            enableKeyEvents: true,
             value: '用户名密码不能为空'
 
         },
@@ -81,9 +81,9 @@ Ext.define('Admin.view.login.Login',{
         }],
         
         buttons: [{
-
+            //xtype: 'button',
             text: '登录',
-            
+           
             formBind: true,
 
             listeners: {

@@ -40,7 +40,9 @@ Ext.define('Admin.view.xzbg.xjgz.XjgzController', {
 		record.save();
 		Ext.data.StoreManager.lookup('dbsyData').load();
 		win.close();
-	},
+    },
+    
+    
     // onToggleConfig: function (menuitem) {
     //     var treelist = this.lookupReference('treelist');
 

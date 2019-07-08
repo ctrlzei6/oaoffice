@@ -71,7 +71,7 @@ Ext.define('Admin.view.gzlgl.bdfl.AddBd', {
 	buttons: ['->',{
         xtype: 'button',
         text: '添加',
-        handler: 'submitAddBdfl'
+        handler: 'submitAddBdsj'
     },{
         xtype: 'button',
         text: '取消',

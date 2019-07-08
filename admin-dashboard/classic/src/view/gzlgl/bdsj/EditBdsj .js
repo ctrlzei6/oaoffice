@@ -59,7 +59,7 @@ Ext.define('Admin.view.ggxx.gxwj.EditBdfl', {
     buttons: ['->',{
         xtype: 'button',
         text: '修改',
-        handler: 'submitEditBdfl'
+        handler: 'submitEditBdsj'
     },{
         xtype: 'button',
         text: '取消',

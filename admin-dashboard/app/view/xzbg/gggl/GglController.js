@@ -33,9 +33,15 @@ Ext.define('Admin.view.xzbg.gggl.GglController',{
             icon: Ext.Msg.QUESTION,
             fn: function (btn) {
                 if (btn === 'yes') {
-                    var key = grid.selModel.getLastSelected().get('id');    
+                    // var key = grid.selModel.getLastSelected().get('id');    
                     Ext.Ajax.request({
-                        url: URL + key,
+                        url:"http://localhost:8080/ssh-demo/order/deletes",
+                        params:{
+                            "id":1
+                        },
+                        method:"POSt",
+                        //type:
+                        //url: URL + key,
                         success: function (response, opts) {
                             Ext.MessageBox.alert('提示', '删除成功');
                             grid.store.reload();

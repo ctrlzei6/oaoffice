@@ -1,7 +1,8 @@
 Ext.define('Admin.view.ggl.GglController',{
     extend:'Ext.app.ViewController',
     alias:'controller.gglController',
-
+	
+	//查看详细信息
 	lookWindow:function(grid, rowIndex, colIndex){
 		var record = grid.getStore().getAt(rowIndex);
 	   //获取选中数据的字段值：console.log(record.get('id')); 或者 console.log(record.data.id);
@@ -12,7 +13,7 @@ Ext.define('Admin.view.ggl.GglController',{
 			}
 		},
 	
-
+	//查询
     onSearch:function(btn){
 		var searchField = this.lookupReference('searchFieldName').getValue();
 		var searchValue = this.lookupReference('searchFieldValue').getValue();
