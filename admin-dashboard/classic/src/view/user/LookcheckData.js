@@ -38,7 +38,7 @@ Ext.define('Admin.view.user.LookcheckData',{
                 name:'username',
                 //bind:'{data.username}',
                 //value:'Lisa',
-                bind:'{userName}', 
+                bind:'{username}', 
                 readOnly: true
             },{
                 xtype:'combo',

@@ -26,31 +26,35 @@ Ext.define('Admin.view.ggxx.gxwj.GxwjController',{
    }
 },
    //删除文件	
-	deleteOneRow:function(grid, rowIndex, colIndex){
-    Ext.Msg.show({
-        title: '提示',
-        message: '是否确认删除？',
-        buttons: Ext.Msg.YESNO,
-        icon: Ext.Msg.QUESTION,
-        fn: function (btn) {
-            if (btn === 'yes') {
-                var key = grid.selModel.getLastSelected().get('id');    
+   onDeleteOneRow:function(grid, rowIndex, colIndex){
+    Ext.MessageBox.confirm('提示', '确定要进行删除操作吗？',
+          function(btn, text){
+            if(btn=='yes'){
+                var store = grid.getStore();
+                var record = store.getAt(rowIndex);
+                store.remove(record);//DELETE //http://localhost:8081/wdkh/112
+                //store.sync();
+
                 Ext.Ajax.request({
-                    url: URL + key,
+                    url:"http://localhost:8080/ssh-demo/order/deletes",
+                    params:{
+                        "id":1
+                    },
+                    method:"POSt",
+                    //type:
+                    //url: URL + key,
                     success: function (response, opts) {
                         Ext.MessageBox.alert('提示', '删除成功');
-                        grid.store.reload();
+                        //grid.store.reload();
                     },
                     failure: function (response, opts) {
                         Ext.MessageBox.alert('提示', '删除异常');
                     }
                 });
             }
-
         }
-    })
-
-    },
+    , this);
+}, 
     //查询
     onSearch:function(btn){
 		var searchField = this.lookupReference('searchFieldName').getValue();

@@ -14,13 +14,12 @@ Ext.define('Admin.view.ggl.GglPanel',{
         xtype:'gridpanel',
         title:'公告栏',
         bind: '{gglLists}',
-        tbar: [{
+        tbar: [
+        {
             xtype: 'combobox',
             reference:'searchFieldName',
             hideLabel: true,
-            
             store:Ext.create("Ext.data.Store", {
-                
                 fields: ["name", "value"],
                 data: [
                       { name: '公告主题', value: 'ggTheme' },
@@ -38,7 +37,9 @@ Ext.define('Admin.view.ggl.GglPanel',{
             listeners:{
                 select: 'searchComboboxSelectChuang'
             }
-        }, '-',{
+        }, 
+        
+        '-',{
             xtype:'textfield',
             reference:'searchFieldValue',
             name:'gglPanelSearchField'
@@ -51,6 +52,9 @@ Ext.define('Admin.view.ggl.GglPanel',{
         }, 
         
         ],
+        // store:Ext.create('Admin.store.gg.Ggdata',{
+        //     　　　　　　　　storeId:'ggdata'
+        //     　　}),
         columns: [
             {
                 xtype: 'gridcolumn',

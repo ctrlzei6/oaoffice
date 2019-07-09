@@ -4,12 +4,12 @@ Ext.define('Admin.view.login.Login',{
     requires: [
         'Admin.view.login.LoginController',
         'Ext.form.Panel'
-
+        
     ],
-    listeners: {
-        //监听页面初始化事件
-        render: 'onLoginRender'
-    },
+    // listeners: {
+    //     //监听页面初始化事件
+    //     render: 'onLoginRender'
+    // },
     controller: 'login',
     title: '用户登录',
     plain: true,
@@ -65,20 +65,21 @@ Ext.define('Admin.view.login.Login',{
             value: '用户名密码不能为空'
 
         },
-        {
-            xtype: 'container',
-            layout: 'hbox',
-            items: [{
-                xtype: 'checkboxfield',
-                flex: 1,
-                cls: 'form-panel-font-color rememberMeCheckbox',
-                height: 30,
-                inputValue: 1,
-                name: 'persist',
-                bind: '{persist}',
-                boxLabel: '记住我'
-            }]
-        }],
+        // {
+        //     xtype: 'container',
+        //     layout: 'hbox',
+        //     items: [{
+        //         xtype: 'checkboxfield',
+        //         flex: 1,
+        //         cls: 'form-panel-font-color rememberMeCheckbox',
+        //         height: 30,
+        //         inputValue: 1,
+        //         name: 'persist',
+        //         //bind: '{persist}',
+        //         boxLabel: '记住我'
+        //     }]
+        // }
+    ],
         
         buttons: [{
             //xtype: 'button',

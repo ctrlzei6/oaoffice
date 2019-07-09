@@ -16,7 +16,7 @@ Ext.define('Admin.model.FileModel', {
     ],
     proxy: {
         type: 'rest',
-        url: '/order',
+        url: '',
     }
     
 });

@@ -20,6 +20,6 @@ Ext.define('Admin.model.User', {
     // },
     proxy: {
         type: 'rest',
-        url: '/order',
+        url: '',
     }
 });

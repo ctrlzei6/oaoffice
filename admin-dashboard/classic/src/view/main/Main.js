@@ -3,7 +3,8 @@
      
     requires: [
         'Ext.button.Segmented',
-        'Ext.list.Tree'
+        'Ext.list.Tree',
+        'Admin.view.main.MainModel'
     ],
     xtype:'main',
     controller: 'main',
@@ -54,9 +55,12 @@
                     xtype:'grxxButton'
                 },
                 {
-                    xtype: 'tbtext',
-                    text: '用户名:Admin',
-                    cls: 'top-user-name'
+                    
+                        //相当于一个label
+                        xtype: 'tbtext',
+                        html:'欢迎您！',
+                        bind: '{username}'
+                    
                 },
                 {
                     xtype: 'image',

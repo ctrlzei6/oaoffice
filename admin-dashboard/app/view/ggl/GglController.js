@@ -33,4 +33,63 @@ Ext.define('Admin.view.ggl.GglController',{
 		}
 		//store.load({params:{start:0, limit:20, page:1}});
 	},
+	// onSearch: function () {
+	// 	var form = this.getView().lookupReference('gglPanel').lookupReference('gglPanelSearchField');//取得查询条件form，getView得到引用了controller的页面，lookupReference方法下面说
+    //     var data = {};
+    //     form.getForm().getFields().each(function() {  //遍历form
+    //         var name = this.getName();
+    //         var value = this.getValue();           
+    //         if(value instanceof Array && value != null){ //若value不为空 且是Array类型
+    //            value = value.join(",");  //给value中的值用逗号隔开
+    //         }
+    //         data[this.getName()] = value;  //把value放到data里
+    //     });
+
+    //     var organizationGrid = this.getView().lookupReference('gglPanel').lookupReference('gridpanel');  //取得grid
+    //     OrganizationListStore = organizationGrid.store; //取得store
+
+    //     OrganizationListStore.on('beforeload', function (OrganizationListStore) {
+    //         OrganizationListStore.getProxy().extraParams = data; //把data中的搜索条件传入store中
+    //     });
+
+	// },
+	// onSearch:function(btn,event){
+    //     var store=this.getStore('gglPanel');
+    //     var form=btn.up('form[id=queryFormSL]');
+    //     var grid=form.up('grid[id=StudentListGrid]');
+    //     //var grid=Ext.getCmp('StudentListGrid');
+    //     //var pageBar = grid.down('pagingtoolbar');                    
+    //     var userNameORuserCode=form.getForm().getValues()['gglPanelSearchField']; //form.getForm.getValues()返回的是一个数组
+    //     //var gradeCode = form.getForm().getValues()['gradeCode'];        
+    //     store.setProxy({
+    //         type:'ajax',
+    //         actionMethods:{
+    //             read:'POST'
+    //         },
+    //         url:'queryStudent.action',
+    //         extraParams:{'gglPanelSearchField':userNameORuserCode,
+    //                     //'gradeCode':gradeCode                        
+    //                     },
+    //         reader:{
+    //             type:'json',
+    //             root: 'rows',
+    //             totalProperty: 'results'
+    //         }            
+    //     });
+    //    // pageBar.moveFirst();
+    // },
+	searchComboboxSelectChuang:function(combo,record,index){
+		//alert(record.data.name);
+		var searchField = this.lookupReference('searchFieldName').getValue();
+		// if(searchField==='ggTheme'){
+		// 	this.lookupReference('searchFieldValue').hide();
+		// 	this.lookupReference('searchDataFieldValue').show();
+		// 	this.lookupReference('searchDataFieldValue2').show();
+		// }else{
+		// 	this.lookupReference('searchFieldValue').show();
+		// 	this.lookupReference('searchDataFieldValue').hide();
+		// 	this.lookupReference('searchDataFieldValue2').hide();
+		// }
+		
+	},
 });
