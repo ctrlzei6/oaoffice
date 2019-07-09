@@ -51,6 +51,23 @@ Ext.define('Admin.view.khgl.wdkh.WdkhViewController', {
 					var record = store.getAt(rowIndex);
 					store.remove(record);//DELETE //http://localhost:8081/wdkh/112
 					//store.sync();
+					// Ext.Ajax.request({
+					// 	url:"http://localhost:8080/ssh-demo/wdkh/deletes",
+					// 	//uri:'../wdkh/delete',
+                    //     params:{
+                    //         "id":record
+                    //     },
+                    //     method:"post",
+                    //     //type:
+                    //     //url: URL + key,
+                    //     success: function (response, opts) {
+                    //         Ext.MessageBox.alert('提示', '删除成功');
+                    //         //grid.store.reload();
+                    //     },
+                    //     failure: function (response, opts) {
+                    //         Ext.MessageBox.alert('提示', '删除异常');
+                    //     }
+                    // });
 				}
         	}
         , this);
@@ -110,10 +127,32 @@ Ext.define('Admin.view.khgl.wdkh.WdkhViewController', {
 		var form = win.down('form');
 		var record = Ext.create('Admin.model.glmodel.khgl.wdkh.WdkhModel');
 		var values  =form.getValues();//获取form数据
-		record.set(values);
+		//record.set(values);			//post
 		record.save();
-		Ext.data.StoreManager.lookup('wdkhGridStore').load();
+		//Ext.data.StoreManager.lookup('wdkhGridStore').load();
+		//store.add(record);
 		win.close();
+		
+		// var fr = this.lookupReference("form").getForm();
+		// if(fr.isValid()) {
+		// 	var cilentId = fr.findField("cilentId").getValue();
+		// 	if(cilentId) { //编辑
+		// 		var rec = this.st.getById(cilentId);
+		// 		rec.set("cilentName", fr.findField("cilentName").getValue());
+		// 		rec.set("cilentGender", fr.findField("cilentGender").getValue());
+		// 		rec.set("intro", fr.findField("intro").getValue());
+		// 		//this.st.rejectChanges();	//取消所有修改
+		// 		this.st.commitChanges();	//提交修改数据
+		// 	}else { //新增
+		// 		var obj = fr.getFieldValues();
+		// 		obj.cilentId = this.st.last() ? parseInt(this.st.last().get("cilentId"))+1 : 1;
+		// 		this.st.add(obj);
+		// 	}
+		// 	btn.up("rolewin").close();
+		// }
+
+
+
 	},
 
 	//编辑确认
@@ -121,9 +160,9 @@ Ext.define('Admin.view.khgl.wdkh.WdkhViewController', {
 		var win    = btn.up('window');
 		var store = Ext.data.StoreManager.lookup('wdkhGridStore');
 		var values  = win.down('form').getValues();//获取form数据
-		var record = store.getById(values.id);//获取id获取store中的数据
-		record.set(values);//rest put 
-		store.load();
+		var record = store.getById(values.cilentId);//获取id获取store中的数据
+		//record.set(values);//rest put 
+		//store.load();
 		win.close();
 	}
 

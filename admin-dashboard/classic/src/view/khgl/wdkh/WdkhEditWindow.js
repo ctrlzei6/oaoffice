@@ -1,7 +1,7 @@
 Ext.define('Admin.view.khgl.wdkh.WdkhEditWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.wdkhEditWindow',
-    height: 500,
+    height: 300,
     width: 500,
     scrollable: true,
     title: '我的客户编辑',

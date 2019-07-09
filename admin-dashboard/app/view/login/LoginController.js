@@ -35,18 +35,67 @@ Ext.define('Admin.view.login.LoginController',{
     },
 
     //点击登录
-    // onLoginClick: function() {
-    //     window.location.reload();
-    //     // Set the localStorage value to true
-    //     localStorage.setItem("TutorialLoggedIn", true);
+    onLoginClick: function() {
+        //window.location.reload();
+        // Set the localStorage value to true
+        //localStorage.setItem("TutorialLoggedIn", true);
 
-    //     // Remove Login Window
-    //     this.getView().destroy();
+        // loginWindo.form.submit({
+        //     clientValidation:true,
+        //     waitMsg:'正在登录中。。。',//单击登录按钮后提示消息
+        //     url:'',
+        //     method:'POST',
+        //     success:function(form,action){
+        //     var jsontext = Ext.decode(action.response.responseText);
+        //     Ext.Msg.alert('登录提示',"登录成功"+jsontext.msg);
+        //     },
+        //     failure:function(){
+        //     Ext.Msg.alert('登录提示','登录失败');
+        //     }
+        // });
 
-    //     // Add the main view to the viewport
-    //     Ext.create({
-    //         xtype: 'main'
-    //     });
+        var form = this.lookupReference("form");
+        if(form.isValid()) {
+			this.getView().destroy();
+			Ext.create({
+                xtype: 'main'
+            });
+        }
+        
+        // Remove Login Window
+        // this.getView().destroy();
+
+        // Add the main view to the viewport
+        // Ext.create({
+        //     xtype: 'main'
+        // });
+
+        // var loginvalues = Ext.util.JSON.encode(btn.up('window').down('form').getForm().getValues());
+        // Ext.Ajax.request({
+        //     url: '',
+        //     params: loginvalues,
+        //     method: 'post',
+        //     useDefaultXhrHeader: false,
+        
+        //     //dataType:"application/x-www-form-urlencoded; charset=UTF-8",
+        //     success: function (response) {
+        //         var result = Ext.JSON.decode(response.responseText);
+        //         if(result.Code == "0"){
+        //             Ext.util.Cookies.set('username',result.Data.username);
+        //             Ext.util.Cookies.set('password',result.Data.password);
+        
+        
+        
+        //             //btn.up('window').close();
+        //            // window.location.href = "index.html";
+        //         }else{
+        //             Ext.Msg.alert("错误提示", '用户名或密码输入错误，请重新输入！');
+        //         }
+        //     },
+        //     failure:function (response) {
+        //         Ext.Msg.alert("错误提示", '用户名或密码输入错误，请重新输入！');
+        //     }
+        // });
 
     // },
     // onLoginClick: function(btn) {
