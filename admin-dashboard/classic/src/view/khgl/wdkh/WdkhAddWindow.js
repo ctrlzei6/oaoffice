@@ -1,7 +1,7 @@
 Ext.define('Admin.view.wdkh.WdkhAddWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.wdkhAddWindow',
-    height: 500,
+    height: 300,
     width: 500,
     scrollable: true,
     title: '添加客户信息',
@@ -20,6 +20,7 @@ Ext.define('Admin.view.wdkh.WdkhAddWindow', {
             xtype: 'textfield',
             fieldLabel: 'id',
             name:'cilentId',
+            vaule:'',
             hidden: true,
             readOnly: true
         }, {

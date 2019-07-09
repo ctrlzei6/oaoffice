@@ -3,6 +3,7 @@ Ext.define('Admin.view.login.Login',{
     xtype: 'login',
     requires: [
         'Admin.view.login.LoginController',
+        "App.model.LoginModel",
         'Ext.form.Panel'
 
     ],
@@ -10,6 +11,9 @@ Ext.define('Admin.view.login.Login',{
         //监听页面初始化事件
         render: 'onLoginRender'
     },
+    viewModel: {
+		type: "login"
+	},
     controller: 'login',
     title: '用户登录',
     plain: true,
@@ -41,7 +45,7 @@ Ext.define('Admin.view.login.Login',{
             xtype: 'textfield',
             name: 'username',
             fieldLabel: '用户名',
-
+            bind: "{username}",
             allowBlank: false
 
         }, {
@@ -51,7 +55,7 @@ Ext.define('Admin.view.login.Login',{
             name: 'password',
 
             inputType: 'password',
-
+            bind: "{password}",
             fieldLabel: '密&nbsp;&nbsp;&nbsp;码',
 
             allowBlank: false
@@ -81,7 +85,7 @@ Ext.define('Admin.view.login.Login',{
         }],
         
         buttons: [{
-            //xtype: 'button',
+            xtype: 'button',
             text: '登录',
            
             formBind: true,
