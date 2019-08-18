@@ -16,6 +16,6 @@ Ext.define('Admin.model.Ggdata', {
     ],
     proxy: {
         type: 'rest',
-        url: '',
+        url: 'http://localhost:8080/ssh-demo/gg/getAll'
     }
 });

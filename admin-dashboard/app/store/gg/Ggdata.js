@@ -5,17 +5,37 @@ Ext.define('Admin.store.gg.Ggdata', {
     storeId:'ggData',
     model: 'Admin.model.Ggdata',
    
-    data: { items: [
-        { 
-            identifier: 1, 
-            ggTheme: "我爱中国", 
-            creatTime: "2019/06/21", 
-            stopTime: "2099/09/09", 
-            publishMan:'张三',
-            ggContent:'五十六个民族五十六枝花',
-            publishTime:'2019/06/21'
-        },   
-    ]},
+    // data: { items: [
+    //     { 
+    //         identifier: 1, 
+    //         ggTheme: "我爱中国", 
+    //         creatTime: "2019/06/21", 
+    //         stopTime: "2099/09/09", 
+    //         publishMan:'张三',
+    //         ggContent:'五十六个民族五十六枝花',
+    //         publishTime:'2019/06/21'
+    //     },   
+
+    //     // { 
+    //     //     identifier: 2, 
+    //     //     ggTheme: "我爱莞工", 
+    //     //     creatTime: "2019/07/09", 
+    //     //     stopTime: "2019/07/09", 
+    //     //     publishMan:'李四',
+    //     //     ggContent:'qqqqqqqqqqqqqqq',
+    //     //     publishTime:'2019/09/09'
+    //     // }, 
+
+    //     // { 
+    //     //     identifier: 3, 
+    //     //     ggTheme: "123", 
+    //     //     creatTime: "2019/07/09", 
+    //     //     stopTime: "2019/07/09", 
+    //     //     publishMan:'李四',
+    //     //     ggContent:'123',
+    //     //     publishTime:'2019/09/09'
+    //     // }, 
+    // ]},
 
     proxy: {
         type: 'memory',

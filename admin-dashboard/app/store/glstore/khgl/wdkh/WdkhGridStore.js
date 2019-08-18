@@ -9,8 +9,19 @@ Ext.define('Admin.store.glstore.khgl.wdkh.WdkhGridStore', {
 		'cilents':
 		[
 			{'cilentId':'4', 'cilentName':"客户A", 'cilentGender':"男", 'intro':"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",'departName':'Lisa'},
-			{'cilentId':'1', 'cilentName':"客户D", 'cilentGender':"男", 'intro':"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",'departName':'Lisa'},
-			{'cilentId':'6', 'cilentName':"客户F", 'cilentGender':"女", 'intro':"cccccccccccccccccccccccccccccc",'departName':'Lisa'}
+			
+			// {'cilentId':'1', 
+			// 'cilentName':"客户D", 
+			// 'cilentGender':"男",
+			//  'intro':"123",
+			//  'departName':'Lisa'},
+			
+			// {'cilentId':'6', 
+			// 'cilentName':"客户F", 
+			// 'cilentName':"ss", 
+			// 'cilentGender':"女", 
+			// 'intro':"456",
+			// 'departName':'Lisa'}
 		]
 	},
 	

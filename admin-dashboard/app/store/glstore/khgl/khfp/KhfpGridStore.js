@@ -8,12 +8,15 @@ Ext.define('Admin.store.glstore.khgl.khfp.KhfpGridStore', {
 	data: {
 		'cilents':
 		[
-			{'cilentId':'4', 'cilentName':"客户A", 'cilentGender':"男", 'intro':"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",'departName':'Lisa'},
+			//{'cilentId':'1', 'cilentName':"客户D", 'cilentGender':"男", 'intro':"456",'departName':'Lisa'},
+			//{'cilentId':'6', 'cilentName':"客户F", 'cilentGender':"女", 'intro':"cccccccccccccccccccccccccccccc",'departName':'Lisa'},
+
+			
 			{'cilentId':'2', 'cilentName':"客户B", 'cilentGender':"男", 'intro':"yyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",'departName':'Worm'},
 			{'cilentId':'3', 'cilentName':"客户C", 'cilentGender':"女", 'intro':"zzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",'departName':'Homer'},
-			{'cilentId':'1', 'cilentName':"客户D", 'cilentGender':"男", 'intro':"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",'departName':'Lisa'},
+			{'cilentId':'4', 'cilentName':"客户A", 'cilentGender':"男", 'intro':"123",'departName':'Lisa'},
 			{'cilentId':'5', 'cilentName':"客户E", 'cilentGender':"女", 'intro':"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",'departName':'Homer'},
-			{'cilentId':'6', 'cilentName':"客户F", 'cilentGender':"女", 'intro':"cccccccccccccccccccccccccccccc",'departName':'Lisa'}
+			//
 		]
 	},
 	

@@ -60,11 +60,41 @@ Ext.define('Admin.view.xzbg.gggl.GglController',{
 	submitAddGg:function(btn){
 		var win    = btn.up('window');
 		var form = win.down('form');
-		var record = Ext.create('Admin.model.Ggdata');
+		// var record = Ext.create('Admin.model.Ggdata');
 		var values  =form.getValues();//获取form数据
-		record.set(values);
-		record.save();
-		Ext.data.StoreManager.lookup('ggData').load();
+		// record.set(values);
+		// record.save();
+        Ext.data.StoreManager.lookup('ggData').load();
+        
+        Ext.Ajax.request({
+            url: 'http://localhost:8080/ssh-demo/gg/save',
+            params: {
+                gg:values
+            },
+            method: 'POST',
+            useDefaultXhrHeader: false,
+        
+            //dataType:"application/x-www-form-urlencoded; charset=UTF-8",
+            success: function (response) {
+                var result = Ext.JSON.decode(response.responseText);
+                if(result.code == "200"){
+                    Ext.Msg.alert("添加成功！");
+                    Ext.util.Cookies.set('username',Admin.store.user.Userdata.username);
+                    Ext.util.Cookies.set('password',Admin.store.user.Userdata.password);
+            
+        
+        
+                    //btn.up('window').close();
+                   // window.location.href = "index.html";
+                }else{
+                    Ext.Msg.alert("错误提示", '用户名或密码输入错误，请重新输入！');
+                }
+            },
+            failure:function (response) {
+                Ext.Msg.alert("错误提示", '用户名或密码输入错误，请重新输入！');
+            }
+        });
+
 		win.close();
     },
     //编辑提交按钮
@@ -72,9 +102,38 @@ Ext.define('Admin.view.xzbg.gggl.GglController',{
 		var win    = btn.up('window');
 		var store = Ext.data.StoreManager.lookup('ggData');
 		var values  = win.down('form').getValues();//获取form数据
-		var record = store.getById(values.id);//获取id获取store中的数据
-		record.set(values);//rest put 
-		//store.load();
+		// var record = store.getById(values.id);//获取id获取store中的数据
+		// record.set(values);//rest put 
+        //store.load();
+        Ext.Ajax.request({
+            url: 'http://localhost:8080/ssh-demo/gg/save',
+            params: {
+                gg:value
+            },
+            method: 'POST',
+            useDefaultXhrHeader: false,
+        
+            //dataType:"application/x-www-form-urlencoded; charset=UTF-8",
+            success: function (response) {
+                var result = Ext.JSON.decode(response.responseText);
+                if(result.code == "200"){
+                    Ext.Msg.alert("添加成功！");
+                    Ext.util.Cookies.set('username',Admin.store.user.Userdata.username);
+                    Ext.util.Cookies.set('password',Admin.store.user.Userdata.password);
+            
+        
+        
+                    //btn.up('window').close();
+                   // window.location.href = "index.html";
+                }else{
+                    Ext.Msg.alert("错误提示", '用户名或密码输入错误，请重新输入！');
+                }
+            },
+            failure:function (response) {
+                Ext.Msg.alert("错误提示", '用户名或密码输入错误，请重新输入！');
+            }
+        });
+
 		win.close();
     },
     //查询

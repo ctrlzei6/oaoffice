@@ -56,10 +56,10 @@
                 },
                 {
                     
-                        //相当于一个label
-                        xtype: 'tbtext',
-                        html:'欢迎您！',
-                        bind: '{username}'
+                    //相当于一个label
+                    xtype: 'tbtext',
+                    html:'欢迎您！',
+                    bind: '{username}'
                     
                 },
                 {

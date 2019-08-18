@@ -3,6 +3,6 @@ Ext.define('Admin.view.main.MainModel', {
     alias: 'viewmodel.main',
 
     data: {
-        'userId':'001', 'username':"李四", 'passWord':"123456",'departId':"1",'gender':"女",'roleId':"1"
+        'userId':'001', 'username':"admin", 'passWord':"1234",'departId':"1",'gender':"女",'roleId':"1"
     }
 });

@@ -7,19 +7,18 @@ Ext.define('Admin.store.file.Filedata', {
     // fields: [
     //     'identifier','fileid','fullname', 'filetype'
     // ],
-    data: { items: [
-        { 
-            id:1,
-            fileId:"kkk001", 
-            fileName: "我爱中国",
-            fileExplain:'爱国教育文件', 
-            bdflId: 1,
-            fileUpload:'soure/wenjian/aa.txt',
-        }
-        //{ identifier: '2', ggtheme: "万里长城", time: "2019/6/21-2025/9/9", publishman:'李四',publishtime:'2019/6/25'},
-        //{ identifier: '3', ggtheme: "辣鸡代码", time: "2019/6/21-2020/9/9", publishman:'张三',publishtime:'2019/6/24'}
+    // data: { items: [
+    //     { 
+    //         id:1,
+    //         fileId:"kkk001", 
+    //         fileName: "我爱中国",
+    //         fileExplain:'爱国教育文件', 
+    //         bdflId: 1,
+    //         fileUpload:'soure/wenjian/aa.txt',
+    //     }
+       
         
-    ]},
+    // ]},
 
     proxy: {
         type: 'memory',
